@@ -1,0 +1,83 @@
+﻿<Window x:Name="frmCliente" x:Class="SistemaEvolution.Apresentacao.frmClientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
+        mc:Ignorable="d"
+        Title="frmCLiente" Height="627.973" Width="1264.603">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="1265" Margin="0,0,-8,0">
+            <TabItem x:Name="tbcCadastrarCliente" Header="Cadastrar Cliente">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Código Cliente :" HorizontalAlignment="Left" Margin="26,92,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbCodCliente" HorizontalAlignment="Left" Height="40" Margin="184,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label Content="Nome Fantasia:" HorizontalAlignment="Left" Margin="26,174,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="40" Margin="184,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" FontSize="20" MaxLines="1" MaxLength="30"/>
+                    <Label Content="Razão Social:" HorizontalAlignment="Left" Margin="26,252,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbRazaoSocial" HorizontalAlignment="Left" Height="40" Margin="162,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="20" MaxLength="50" MaxLines="1"/>
+                    <Label Content="E-mail:" HorizontalAlignment="Left" Margin="564,92,0,0" VerticalAlignment="Top" Width="394" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbEmail_Contato" HorizontalAlignment="Left" Height="40" Margin="646,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="582" FontSize="20" MaxLength="30" MaxLines="1"/>
+                    <Label Content="CPF:" HorizontalAlignment="Left" Margin="26,408,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbCpf" HorizontalAlignment="Left" Height="40" Margin="85,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="20" MaxLength="11" MaxLines="1"/>
+                    <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="426,408,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbCnpj" HorizontalAlignment="Left" Height="40" Margin="494,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontSize="20" MaxLength="12" MaxLines="1"/>
+                    <Label Content="Telefone:" HorizontalAlignment="Left" Margin="564,252,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="40" Margin="664,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1"/>
+                    <Label Content="Endereço Completo:" HorizontalAlignment="Left" Margin="26,330,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbEndereço" HorizontalAlignment="Left" Height="40" Margin="228,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+                    <Button x:Name="btnCadastrarUsuario" Content="Criar novo usuário" HorizontalAlignment="Left" Margin="530,495,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnCadastrarUsuario_Click"/>
+                    <Label Content="Cadastrar Cliente" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30"/>
+                    <RadioButton x:Name="rdbStatusClienteAtivo" Content="Ativo" HorizontalAlignment="Left" Margin="964,414,0,0" VerticalAlignment="Top" FontSize="20" Checked="RadioButton_Checked" Height="27" Width="82"/>
+                    <RadioButton x:Name="rdbStatusClienteInativo" Content=" Inativo" HorizontalAlignment="Left" Margin="1044,414,0,0" VerticalAlignment="Top" Height="32" Width="92" FontSize="20"/>
+                    <Label Content="Status Cliente:" HorizontalAlignment="Left" Margin="824,408,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+
+
+                </Grid>
+
+            </TabItem>
+            <TabItem x:Name="tbcEditarCliente" Header="Editar Cliente">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="67*"/>
+                        <ColumnDefinition Width="1193*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Código Cliente :" HorizontalAlignment="Left" Margin="26,92,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txbEDCodCliente" HorizontalAlignment="Left" Height="40" Margin="117.5,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5" Grid.Column="1"/>
+                    <Label Content="Nome Fantasia:" HorizontalAlignment="Left" Margin="26,174,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txbEDNome" HorizontalAlignment="Left" Height="40" Margin="117.5,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" FontSize="20" MaxLines="1" MaxLength="50" Grid.Column="1"/>
+                    <Label Content="Razão Social:" HorizontalAlignment="Left" Margin="26,252,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txbEDRazaoSocial" HorizontalAlignment="Left" Height="40" Margin="95.5,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" FontSize="20" MaxLength="30" MaxLines="1" Grid.Column="1"/>
+                    <Label Content="E-mail:" HorizontalAlignment="Left" Margin="497.5,92,0,0" VerticalAlignment="Top" Width="393" Height="40" FontSize="20" Grid.Column="1"/>
+                    <TextBox x:Name="txbEDEmail_Contato" HorizontalAlignment="Left" Height="40" Margin="579.5,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="581" FontSize="20" MaxLength="30" MaxLines="1" Grid.Column="1"/>
+                    <Label Content="CPF:" HorizontalAlignment="Left" Margin="26,408,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txbEDCpf" HorizontalAlignment="Left" Height="40" Margin="18.5,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="20" MaxLength="11" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1"/>
+                    <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="361,408,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20" Grid.Column="1"/>
+                    <TextBox x:Name="txbEDCnpj" HorizontalAlignment="Left" Height="40" Margin="429,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontSize="20" MaxLength="12" MaxLines="1" Grid.Column="1"/>
+                    <Label Content="Telefone:" HorizontalAlignment="Left" Margin="497.5,252,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Grid.Column="1"/>
+                    <TextBox x:Name="txbEDTelefone" HorizontalAlignment="Left" Height="40" Margin="597.5,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1" Grid.Column="1"/>
+                    <Label Content="Endereço Completo:" HorizontalAlignment="Left" Margin="26,330,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txbEDEndereco"  HorizontalAlignment="Left" Height="40" Margin="161.5,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1"/>
+
+                    <Label Content="Cadastrar Cliente" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btnEditarUsuario" Content="Editar Cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="839,508,0,0" VerticalAlignment="Top" Width="132" Height="33"/>
+                    <Button x:Name="btnExcluirCliente" Content="Excluir Cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="1017,508,0,0" VerticalAlignment="Top" Width="132" Height="33"/>
+                    <Button x:Name="btnBuscarCliente" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="291,92,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
+                    <RadioButton x:Name="rdbEDStatusClienteAtivo" Content="Ativo" Grid.Column="1" HorizontalAlignment="Left" Margin="895,414,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <RadioButton x:Name="rdbEDStatusFuncionarioInativo" Content="Inativo" Grid.Column="1" HorizontalAlignment="Left" Margin="981,414,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Label Content="Status Cliente:" Grid.Column="1" HorizontalAlignment="Left" Margin="757,408,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>
