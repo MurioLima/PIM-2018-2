@@ -64,24 +64,80 @@ namespace SistemaEvolution.Modelo
             }
 
 
+        public void PesquisarClientePorNome(List<String> ListaCliente)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCliente(ListaCliente);
+            if (validacao.mensagem.Equals(""))
+            {
+                DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
+                Cliente cliente = new Cliente();
+                cliente.Nome = ListaCliente[1];
+                atbEstaticos.listaClienteEstatico = clienteDAO.PesquisarClientePorNome(cliente);
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+
 
         }
 
 
+        public void ExcluirCliente(List<String> ListaCliente)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCliente(ListaCliente);
+            if (validacao.mensagem.Equals(""))
+            {
+                Cliente cliente = new Cliente();
+                cliente.Cod_Cliente = validacao.Cod_Cliente;
+                DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
+                if (clienteDAO.PesquisarCliente(cliente).Nome!=null)
+                {
+                    clienteDAO.ExcluirCliente(cliente);
+                    this.mensagem = clienteDAO.mensagem;
+                }
+                else
+                {
+                    this.mensagem = "Não existe este ID";
 
-        //public Modelo.Cliente EditarCliente(Modelo.Cliente cliente)
-        //{
+                }
+
+            }
+
+        }
+
+        public void EditarCliente(List<String> ListaCliente)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCliente(ListaCliente);
+            if (validacao.mensagem.Equals(""))
+            {
+                Cliente cliente = new Cliente();
+                cliente.Cod_Cliente = validacao.Cod_Cliente;
+                cliente.Nome = ListaCliente[1];
+                cliente.Razao_Social = ListaCliente[2];
+                cliente.CPF = ListaCliente[3];
+                cliente.CNPJ = ListaCliente[4];
+                cliente.Email_Contato = ListaCliente[5];
+                cliente.End_Completo = ListaCliente[6];
+                cliente.Telefone = ListaCliente[7];
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
 
 
 
-        //}
+
+        }
 
 
-       // public Modelo.Cliente ExcluirCliente(Modelo.Cliente cliente)
-        //{
-
-
-
-        //}
     }
 

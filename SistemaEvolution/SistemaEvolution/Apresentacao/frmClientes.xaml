@@ -67,12 +67,13 @@
                     <TextBox x:Name="txbEDEndereco"  HorizontalAlignment="Left" Height="40" Margin="161.5,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1"/>
 
                     <Label Content="Cadastrar Cliente" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30" Grid.ColumnSpan="2"/>
-                    <Button x:Name="btnEditarUsuario" Content="Editar Cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="839,508,0,0" VerticalAlignment="Top" Width="132" Height="33"/>
-                    <Button x:Name="btnExcluirCliente" Content="Excluir Cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="1017,508,0,0" VerticalAlignment="Top" Width="132" Height="33"/>
+                    <Button x:Name="btnEditarUsuario" Content="Editar Cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="839,508,0,0" VerticalAlignment="Top" Width="132" Height="33" Click="btnEditarUsuario_Click"/>
+                    <Button x:Name="btnExcluirCliente" Content="Excluir Cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="1017,508,0,0" VerticalAlignment="Top" Width="132" Height="33" Click="btnExcluirCliente_Click"/>
                     <Button x:Name="btnBuscarCliente" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="291,92,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
                     <RadioButton x:Name="rdbEDStatusClienteAtivo" Content="Ativo" Grid.Column="1" HorizontalAlignment="Left" Margin="895,414,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <RadioButton x:Name="rdbEDStatusFuncionarioInativo" Content="Inativo" Grid.Column="1" HorizontalAlignment="Left" Margin="981,414,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label Content="Status Cliente:" Grid.Column="1" HorizontalAlignment="Left" Margin="757,408,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Button x:Name="btnBuscarNome" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="795,184,0,0" VerticalAlignment="Top" Width="74" Click="btnBuscarNome_Click"/>
 
                 </Grid>
             </TabItem>

@@ -110,6 +110,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\atbEstaticos.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
