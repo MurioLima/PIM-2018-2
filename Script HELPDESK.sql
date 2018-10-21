@@ -20,7 +20,7 @@ go
 CREATE TABLE Cliente (
 Cod_Cliente varchar(5) PRIMARY KEY,
 Nome varchar(50),
-Raz_Social varchar(30),
+Razao_Social varchar(30),
 CPF varchar(11),
 CNPJ varchar(12),
 Email_Contato varchar(30),
