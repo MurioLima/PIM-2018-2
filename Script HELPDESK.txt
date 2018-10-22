@@ -12,6 +12,7 @@ Nome_Tratamento varchar(30),
 CPF varchar(11),
 End_Completo varchar(50),
 Telefone varchar(11),
+Email_Contato varchar(30),
 Stat_Funcionario bit,
 ID_usuario varchar(8)
 )
