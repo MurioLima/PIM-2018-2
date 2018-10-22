@@ -46,7 +46,7 @@
                     <TextBox x:Name="txbEDTelefone" HorizontalAlignment="Left" Height="40" Margin="496,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1"/>
                     <TextBox x:Name="txbEDEndereco" HorizontalAlignment="Left" Height="40" Margin="220,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
                     <Label Content="Cadastrar Funcionário" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="312" FontSize="30"/>
-                    <Button x:Name="btnEditarFuncionario" Content="Editar Funcionário" Grid.Column="1" HorizontalAlignment="Left" Margin="839,508,0,0" VerticalAlignment="Top" Width="132" Height="33"/>
+                    <Button x:Name="btnEditarFuncionario" Content="Editar Funcionário" Grid.Column="1" HorizontalAlignment="Left" Margin="839,508,0,0" VerticalAlignment="Top" Width="132" Height="33" Click="btnEditarFuncionario_Click_1"/>
                     <Button x:Name="btnExcluirFuncionario" Content="ExcluirFuncionário" Grid.Column="1" HorizontalAlignment="Left" Margin="1017,508,0,0" VerticalAlignment="Top" Width="132" Height="33" Click="btnExcluirFuncionario_Click_1"/>
                     <Button x:Name="btnBuscarFuncionario" Content="Buscar" HorizontalAlignment="Left" Margin="396,122,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
                     <Button x:Name="btnBuscarNome" Content="Buscar" HorizontalAlignment="Left" Margin="874,194,0,0" VerticalAlignment="Top" Width="74" Height="40" Click="btnBuscarNome_Click"/>

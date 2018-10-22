@@ -9,10 +9,12 @@ namespace SistemaEvolution.DAL
 {
     public class ClienteDAO
     {
+        //Declaraçao das variaveis 
         Conexao conexaoBD = new Conexao();
         SqlDataReader dataReader;
         public String mensagem;
 
+        //Codigo para Cadastrar o Cliente
         public void CadastrarCliente(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -44,7 +46,7 @@ namespace SistemaEvolution.DAL
 
         }
 
-
+        //Codigo para Pesquisar o Cliente pelo ID
         public Modelo.Cliente PesquisarCliente(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -85,6 +87,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Codigo para pesquisar o Cliente pelo nome
         public List<Modelo.Cliente> PesquisarClientePorNome(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -124,6 +127,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Codigo para Excluir o Cliente
         public void ExcluirCliente(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -143,7 +147,7 @@ namespace SistemaEvolution.DAL
             }
         }
 
-
+        //Codigo para Editar o Cliente
         public void EditarCliente (Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -152,6 +156,13 @@ namespace SistemaEvolution.DAL
                               set Cod_Cliente=@Cod_Cliente,Nome=@Nome,Razao_Social=@Razao_Social,CPF=@CPF,CNPJ=@CNPJ,Email_Contato=@Email_Contato,End_Completo=@End_Completo,Telefone=@Telefone
                               where Cod_Cliente = @Cod_Cliente";
             cmd.Parameters.AddWithValue("@Cod_Cliente", cliente.Cod_Cliente);
+            cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
+            cmd.Parameters.AddWithValue("@Razao_Social", cliente.Razao_Social);
+            cmd.Parameters.AddWithValue("@CPF", cliente.CPF);
+            cmd.Parameters.AddWithValue("@CNPJ", cliente.CNPJ);
+            cmd.Parameters.AddWithValue("@Email_Contato", cliente.Email_Contato);
+            cmd.Parameters.AddWithValue("@End_Completo", cliente.End_Completo);
+            cmd.Parameters.AddWithValue("@Telefone", cliente.Telefone);
             try
             {
                 cmd.Connection = conexaoBD.Conectar();

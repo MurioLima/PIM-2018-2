@@ -22,3 +22,5 @@ C:\Users\PC Gamer\Desktop\SistemaEvolution\SistemaEvolution\obj\Debug\Apresentac
 C:\Users\PC Gamer\Desktop\SistemaEvolution\SistemaEvolution\obj\Debug\Apresentacao\frmProduto.baml
 C:\Users\PC Gamer\Desktop\SistemaEvolution\SistemaEvolution\obj\Debug\Apresentacao\frmFuncionario.g.cs
 C:\Users\PC Gamer\Desktop\SistemaEvolution\SistemaEvolution\obj\Debug\Apresentacao\frmFuncionario.baml
+C:\Users\PC Gamer\Desktop\SistemaEvolution\SistemaEvolution\obj\Debug\Apresentacao\frmUsuario.g.cs
+C:\Users\PC Gamer\Desktop\SistemaEvolution\SistemaEvolution\obj\Debug\Apresentacao\frmUsuario.baml

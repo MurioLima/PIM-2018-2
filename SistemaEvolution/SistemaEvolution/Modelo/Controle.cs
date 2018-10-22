@@ -122,6 +122,9 @@ namespace SistemaEvolution.Modelo
                 cliente.Email_Contato = ListaCliente[5];
                 cliente.End_Completo = ListaCliente[6];
                 cliente.Telefone = ListaCliente[7];
+                DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
+                clienteDAO.EditarCliente(cliente);
+                this.mensagem = clienteDAO.mensagem;
             }
             else
             {
@@ -221,8 +224,34 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem = validacao.mensagem;
             }
-        }      
         }
+
+        public void EditarFuncionario(List<String> ListaFuncionario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosFuncionario(ListaFuncionario);
+            if (validacao.mensagem.Equals(""))
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Cod_Funcionario = validacao.Cod_Cliente;
+                funcionario.Cod_Funcionario = ListaFuncionario[0];
+                funcionario.Nome_Completo = ListaFuncionario[1];
+                funcionario.Nome_Tratamento = ListaFuncionario[2];
+                funcionario.CPF = ListaFuncionario[3];
+                funcionario.End_Completo = ListaFuncionario[4];
+                funcionario.Telefone = ListaFuncionario[5];
+                funcionario.Email_Contato = ListaFuncionario[6];
+                DAL.FuncionarioDAO funcionarioDAO = new DAL.FuncionarioDAO();
+                funcionarioDAO.EditarFuncionario(funcionario);
+                this.mensagem = funcionarioDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+    }
     
 }
 

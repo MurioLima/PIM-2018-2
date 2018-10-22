@@ -118,5 +118,22 @@ namespace SistemaEvolution.Apresentacao
             }
 
         }
+
+
+        private void btnEditarFuncionario_Click_1(object sender, RoutedEventArgs e)
+        {
+            List<String> ListaFuncionario = new List<string>();
+            ListaFuncionario.Add(txbEDCodFuncionario.Text);
+            ListaFuncionario.Add(txbEDNomeCompleto.Text);
+            ListaFuncionario.Add(txbEDNomeTratamento.Text);
+            ListaFuncionario.Add(txbEDCpf.Text);
+            ListaFuncionario.Add(txbEDEndereco.Text);
+            ListaFuncionario.Add(txbEDTelefone.Text);
+            ListaFuncionario.Add(txbEDEmailContato.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.EditarFuncionario(ListaFuncionario);
+            MessageBox.Show(controle.mensagem);
+
+        }
     }
 }

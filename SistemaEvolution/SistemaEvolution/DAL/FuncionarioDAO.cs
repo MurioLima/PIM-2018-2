@@ -137,10 +137,43 @@ namespace SistemaEvolution.DAL
             }
         }
 
-    }
+        public void EditarFuncionario(Modelo.Funcionario funcionario)
+        {
+            this.mensagem = "";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = @"update Funcionario
+                              set Cod_Funcionario=@Cod_Funcionario,Nome_Completo=@Nome_Completo,Nome_Tratamento=@Nome_Tratamento,CPF=@CPF,End_Completo=@End_Completo,Telefone=@Telefone,Email_Contato=@Email_Contato
+                               where Cod_Funcionario = @Cod_Funcionario";
+            cmd.Parameters.AddWithValue("Cod_Funcionario", funcionario.Cod_Funcionario);
+            cmd.Parameters.AddWithValue("Nome_Completo", funcionario.Nome_Completo);
+            cmd.Parameters.AddWithValue("Nome_Tratamento", funcionario.Nome_Tratamento);
+            cmd.Parameters.AddWithValue("CPF",funcionario.CPF);
+            cmd.Parameters.AddWithValue("End_Completo", funcionario.End_Completo);
+            cmd.Parameters.AddWithValue("Telefone", funcionario.Telefone);
+            cmd.Parameters.AddWithValue("Email_Contato", funcionario.Email_Contato);
+            try
+            {
+                cmd.Connection = conexaoBD.Conectar();
+                cmd.ExecuteNonQuery();
+                conexaoBD.Desconectar();
+                this.mensagem = "Pessoa editada com sucesso !!!!!";
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = e.ToString();
+            }
+
+
+
+
 
 
         }
+
+    }
+
+
+}
 
     
 
