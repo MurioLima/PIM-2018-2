@@ -149,7 +149,7 @@ namespace SistemaEvolution.DAL
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"update Cliente
-                              set Nome=@Nome,Razao_Social=@Razao_Social,CPF=@CPF,CNPJ=@CNPJ,Email_Contato=@Email_Contato,End_Completo=@End_Completo,Telefone=@Telefone
+                              set Cod_Cliente=@Cod_Cliente,Nome=@Nome,Razao_Social=@Razao_Social,CPF=@CPF,CNPJ=@CNPJ,Email_Contato=@Email_Contato,End_Completo=@End_Completo,Telefone=@Telefone
                               where Cod_Cliente = @Cod_Cliente";
             cmd.Parameters.AddWithValue("@Cod_Cliente", cliente.Cod_Cliente);
             try

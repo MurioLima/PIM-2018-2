@@ -11,6 +11,7 @@ namespace SistemaEvolution.Modelo
         public String mensagem;
         public String Cod_Cliente;
         public String Cod_Produto;
+        public String Cod_Funcionario;
 
 
         public void ValidarDadosCliente(List<String> ListaCliente)
@@ -34,7 +35,7 @@ namespace SistemaEvolution.Modelo
                 this.mensagem = "Telefone com mais de 11 caracteres \n";
             try
             {
-                this.Cod_Cliente = (ListaCliente[1]);
+                this.Cod_Cliente = (ListaCliente[0]);
             }
             catch (FormatException e)
             {
@@ -58,11 +59,38 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem += "ID invalido";
             }
+        }
+
+
+        public void ValidarDadosFuncionario(List<String> ListaFuncionario)
+        {
+            this.mensagem = "";
+            if (ListaFuncionario[0].Length>5)
+                this.mensagem= "Codigo com mais de 5 caracteres \n";
+            if (ListaFuncionario[1].Length > 50)
+                this.mensagem = "Nome com mais de 50 caracteres \n";
+            if (ListaFuncionario[2].Length > 50)
+                this.mensagem = "Nome com mais de 50 caracteres \n";
+            if (ListaFuncionario[3].Length > 11)
+                this.mensagem = "CPF com mais de 11 caracteres \n";
+            if (ListaFuncionario[4].Length > 50)
+                this.mensagem = "Endereço com mais de 50 caracteres \n";
+            if (ListaFuncionario[5].Length > 11)
+                this.mensagem = "Telefone com mais de 11 caracteres \n";
+            if (ListaFuncionario[6].Length > 50)
+                this.mensagem = "E-mail com mais de 50 caracteres \n";
+            try
+            {
+                this.Cod_Funcionario = (ListaFuncionario[0]);
+            }
+            catch (FormatException e)
+            {
+                this.mensagem += "ID invalido";
+            }
 
 
 
         }
-
 
     }
 }

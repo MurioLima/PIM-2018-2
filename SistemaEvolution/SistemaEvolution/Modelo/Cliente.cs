@@ -15,7 +15,8 @@ namespace SistemaEvolution.Modelo
         public String CNPJ;
         public String Email_Contato;
         public String End_Completo;
-        public String Telefone;   
+        public String Telefone;
+       
 
     }
 }

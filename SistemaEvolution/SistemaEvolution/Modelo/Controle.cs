@@ -10,6 +10,8 @@ namespace SistemaEvolution.Modelo
     public class Controle
     {
 
+
+        // Abaixo Crud cliente
         public String mensagem;
         public void CadastrarCliente(List<String> ListaCliente)
         {
@@ -19,7 +21,7 @@ namespace SistemaEvolution.Modelo
             if (validacao.mensagem.Equals(""))
             {
                 Cliente cliente = new Cliente();
-                cliente.Cod_Cliente =ListaCliente[0];
+                cliente.Cod_Cliente = ListaCliente[0];
                 cliente.Nome = ListaCliente[1];
                 cliente.Razao_Social = ListaCliente[2];
                 cliente.CPF = ListaCliente[3];
@@ -58,10 +60,8 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem = validacao.mensagem;
             }
-                return cliente;
-
-
-            }
+            return cliente;
+        }
 
 
         public void PesquisarClientePorNome(List<String> ListaCliente)
@@ -80,8 +80,6 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem = validacao.mensagem;
             }
-
-
         }
 
 
@@ -95,7 +93,7 @@ namespace SistemaEvolution.Modelo
                 Cliente cliente = new Cliente();
                 cliente.Cod_Cliente = validacao.Cod_Cliente;
                 DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
-                if (clienteDAO.PesquisarCliente(cliente).Nome!=null)
+                if (clienteDAO.PesquisarCliente(cliente).Nome != null)
                 {
                     clienteDAO.ExcluirCliente(cliente);
                     this.mensagem = clienteDAO.mensagem;
@@ -103,11 +101,8 @@ namespace SistemaEvolution.Modelo
                 else
                 {
                     this.mensagem = "Não existe este ID";
-
                 }
-
             }
-
         }
 
         public void EditarCliente(List<String> ListaCliente)
@@ -119,6 +114,7 @@ namespace SistemaEvolution.Modelo
             {
                 Cliente cliente = new Cliente();
                 cliente.Cod_Cliente = validacao.Cod_Cliente;
+                cliente.Cod_Cliente = ListaCliente[0];
                 cliente.Nome = ListaCliente[1];
                 cliente.Razao_Social = ListaCliente[2];
                 cliente.CPF = ListaCliente[3];
@@ -134,10 +130,103 @@ namespace SistemaEvolution.Modelo
         }
 
 
+        // Abaixo Crud Funcionario
 
+
+        public void CadastrarFuncionario(List<String> ListaFuncionario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosFuncionario(ListaFuncionario);
+            if (validacao.mensagem.Equals(""))
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Cod_Funcionario = ListaFuncionario[0];
+                funcionario.Nome_Completo = ListaFuncionario[1];
+                funcionario.Nome_Tratamento = ListaFuncionario[2];
+                funcionario.CPF = ListaFuncionario[3];
+                funcionario.End_Completo = ListaFuncionario[4];
+                funcionario.Telefone = ListaFuncionario[5];
+                funcionario.Email_Contato = ListaFuncionario[6];
+                DAL.FuncionarioDAO FuncionarioDAO = new DAL.FuncionarioDAO();
+                FuncionarioDAO.CadastrarFuncionario(funcionario);
+                this.mensagem = FuncionarioDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
 
         }
 
+        public Modelo.Funcionario PesquisarFuncionario(List<String> ListaFuncionario)
+        {
+            this.mensagem = "";
+            Funcionario funcionario = new Funcionario();
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCliente(ListaFuncionario);
+            if (validacao.mensagem.Equals(""))
+            {
+                funcionario.Cod_Funcionario= validacao.Cod_Funcionario;
+                DAL.FuncionarioDAO FuncionarioDAO = new DAL.FuncionarioDAO();
+                funcionario = FuncionarioDAO.PesquisarFuncionario(funcionario);
+                this.mensagem = FuncionarioDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+            return funcionario;
+        }
 
-    }
+        public void PesquisarFuncionarioPorNome(List<String> ListaFuncionario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosFuncionario(ListaFuncionario);
+            if (validacao.mensagem.Equals(""))
+            {
+                DAL.FuncionarioDAO FuncionarioDAO = new DAL.FuncionarioDAO();
+                Funcionario funcionario = new Funcionario();
+                funcionario.Nome_Completo = ListaFuncionario[1];
+                atbEstaticos.listaFuncionarioEstatico = FuncionarioDAO.PesquisarFuncionarioPorNome(funcionario);
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+        public void ExcluirFuncionario(List<String> ListaFuncionario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosFuncionario(ListaFuncionario);
+            if(validacao.mensagem.Equals(""))
+            {
+                Funcionario funcionario = new Funcionario();
+                funcionario.Cod_Funcionario = validacao.Cod_Funcionario;
+                DAL.FuncionarioDAO funcionarioDAO = new DAL.FuncionarioDAO();
+                if (funcionarioDAO.PesquisarFuncionario(funcionario).Nome_Completo !=null)
+                {
+                    funcionarioDAO.ExcluirFuncionario(funcionario);
+                    this.mensagem = funcionarioDAO.mensagem;
+                }
+                else
+                {
+                    this.mensagem = "Não existe este ID";
+                }
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }      
+        }
+    
+}
+
+
+
+
 

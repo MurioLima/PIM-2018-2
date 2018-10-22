@@ -10,5 +10,7 @@ namespace SistemaEvolution.Modelo
     {
         public static List<Cliente> listaClienteEstatico;
 
+        public static List<Funcionario> listaFuncionarioEstatico;
+
     }
 }
