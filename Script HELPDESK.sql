@@ -13,7 +13,7 @@ CPF varchar(11),
 End_Completo varchar(50),
 Email_Contato varchar(30),
 Telefone varchar(11),
-Stat_Funcionario bit,
+Stat_Funcionario char,
 ID_usuario varchar(8)
 )
 go
@@ -27,7 +27,7 @@ CNPJ varchar(12),
 Email_Contato varchar(30),
 End_Completo varchar(30),
 Telefone varchar(11),
-Stat_Cliente bit,
+Stat_Cliente char,
 ID_usuario varchar(8)
 )
 go
