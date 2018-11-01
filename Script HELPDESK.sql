@@ -49,7 +49,7 @@ FOREIGN KEY(Cod_Cliente) REFERENCES Cliente (Cod_Cliente)
 go
 
 CREATE TABLE Usuario (
-Acesso bit,
+Acesso char,
 ID_usuario varchar(8) PRIMARY KEY,
 Senha varchar(8)
 )
