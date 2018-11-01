@@ -1,0 +1,73 @@
+﻿<Window x:Name="frmPaginaInicial" x:Class="SistemaEvolution.Apresentacao.frmPaginaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
+        mc:Ignorable="d"
+        Title="Pagina Inicial" Height="627.973" Width="1264.603">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Menu HorizontalAlignment="Left" Height="84" Margin="10,10,0,0" VerticalAlignment="Top" Width="1358">
+            <MenuItem x:Name="mniPaginaInicial" Header="" Height="100" Width="164" FontSize="18" Focusable="False">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="Imagens/Layout botao pagina inicial.png"/>
+                </MenuItem.Background>
+
+            </MenuItem>
+            <MenuItem x:Name="mniPaginaCadastros" Header="" Height="100" Width="164" FontSize="18">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="Imagens/Layout botao cadastros.png" Stretch="Fill" TileMode="FlipX"/>
+                </MenuItem.Background>
+
+                <MenuItem x:Name="mniPaginaUsuarios" Header="" HorizontalAlignment="Left" Height="100" Width="167" Click="mniPaginaUsuarios_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="Imagens/Layout list usuarios.png"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+                <MenuItem x:Name="mniPaginaClientes" Header="" HorizontalAlignment="Left" Height="100" Width="167" Click="mniPaginaClientes_Click" >
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="Imagens/layout list cliente.png"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+                <MenuItem x:Name="mniPaginaProdutos" Header="" HorizontalAlignment="Left" Height="100" Width="167" Click="mniPaginaProdutos_Click" >
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="Imagens/layout list produto.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem x:Name="mniPaginaFuncionario" Header="" HorizontalAlignment="Left" Height="100" Width="167" Click="mniPaginaFuncionario_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="Imagens/layout botao funcionario.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="" Height="100" Width="177">
+                <MenuItem.Background>
+                    <ImageBrush ImageSource="Imagens/layout botao atendimentos.png"/>
+                </MenuItem.Background>
+                <MenuItem x:Name="mniPaginaChamados" Header="" Height="100" Width="164" FontSize="18" Click="mniPaginaChamados_Click">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="Imagens/layout list chamados.png"/>
+                    </MenuItem.Background>
+
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Image HorizontalAlignment="Left" Height="192" Margin="1034,450,0,-45" VerticalAlignment="Top" Width="198" Source="Imagens/LOGOMIJHSYSTENS.png" Grid.RowSpan="2">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Imagens/LOGOMIJHSYSTENS.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="360" Margin="282,173,0,0" VerticalAlignment="Top" Width="640" Source="Imagens/logoSistema.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Imagens/logoSistema.png"/>
+            </Image.OpacityMask>
+        </Image>
+
+    </Grid>
+</Window>

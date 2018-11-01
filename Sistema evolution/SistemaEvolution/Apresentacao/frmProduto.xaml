@@ -1,0 +1,65 @@
+﻿<Window x:Class="SistemaEvolution.Apresentacao.frmProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
+        mc:Ignorable="d"
+        Title="frmProduto" Height="627.973" Width="1264.603">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="1265">
+            <TabItem x:Name="tbcCadastrarProduto" Header="Cadastrar Produto">
+                <Grid Background="#FFE5E5E5">
+                    <Image HorizontalAlignment="Left" Height="504" Margin="136,32,0,0" VerticalAlignment="Top" Width="1000" Source="Imagens/logoSistema.png" Opacity="0.04">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Imagens/logoSistema.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                    <Label Content="Código Produto:" HorizontalAlignment="Left" Margin="26,144,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbCodProduto" HorizontalAlignment="Left" Height="40" Margin="184,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label Content="Descrição do Produto:" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbDescProduto" HorizontalAlignment="Left" Height="188" Margin="247,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="20" MaxLines="5" MaxLength="100" RenderTransformOrigin="1,1"/>
+                    <Label Content="Cadastrar Produto" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30"/>
+                    <Button x:Name="btnCadastrarProduto" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="1014,480,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnCadastrarProduto_Click" />
+                    <Image HorizontalAlignment="Left" Height="160" Margin="1000,42,0,0" VerticalAlignment="Top" Width="158" Source="Imagens/produto.png">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Imagens/produto.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                    <TextBox x:Name="txbCodCliente" HorizontalAlignment="Left" Height="40" Margin="444,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" TextChanged="TextBox_TextChanged" FontSize="20"/>
+                    <Label Content="Cliente:" HorizontalAlignment="Left" Margin="364,147,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Button x:Name="btnBuscarProduto1" Content="Buscar Cliente" HorizontalAlignment="Left" Margin="740,144,0,0" VerticalAlignment="Top" Width="94" Height="40" Click="Button_Click"/>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbcEditarProduto" Header="Editar Produto">
+                <Grid Background="#FFE5E5E5">
+                    <Image HorizontalAlignment="Left" Height="504" Margin="136,32,0,0" VerticalAlignment="Top" Width="1000" Source="Imagens/logoSistema.png" Opacity="0.04">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Imagens/logoSistema.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                    <Label Content="Editar Produto" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30"/>
+                    <Label Content="Código Produto:" HorizontalAlignment="Left" Margin="26,144,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbEdCodProduto" HorizontalAlignment="Left" Height="40" Margin="184,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label Content="Descrição do Produto:" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbEdDescricaoProduto" HorizontalAlignment="Left" Height="188" Margin="247,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="20" MaxLines="5" MaxLength="100"/>
+                    <Button x:Name="btnEditarProduto" Content="Editar Produto" HorizontalAlignment="Left" Margin="802,480,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnEditarProduto_Click"/>
+                    <Button x:Name="btnExcluirProduto" Content="Excluir Produto" HorizontalAlignment="Left" Margin="997,480,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnExcluirProduto_Click"/>
+
+                    <Image HorizontalAlignment="Left" Height="160" Margin="1013,45,0,0" VerticalAlignment="Top" Width="158" Source="Imagens/produto.png">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Imagens/produto.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                    <Button x:Name="btnBuscarProduto" Content="Buscar" HorizontalAlignment="Left" Margin="358,156,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscarProduto_Click"/>
+                    <Label Content="Label" HorizontalAlignment="Left" Margin="485,160,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txbEDCodCliente" HorizontalAlignment="Left" Height="23" Margin="581,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

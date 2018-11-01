@@ -1,0 +1,31 @@
+﻿<Window x:Name="frmChamado1" x:Class="SistemaEvolution.Apresentacao.frmChamado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
+        mc:Ignorable="d"
+        Title="frmChamados" Height="627.973" Width="1264.603">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="597" Margin="-3,0,0,0" VerticalAlignment="Top" Width="1265">
+            <TabItem x:Name="tbcVisualizarChamados" Header="Visualizar Chamados">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="txbCodChamado" HorizontalAlignment="Left" Height="40" Margin="230,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label Content="Descrição do Chamado:" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbDescriçaoChamado" HorizontalAlignment="Left" Height="188" Margin="247,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="20" MaxLines="8" MaxLength="500"/>
+                    <Button x:Name="btnCadastrarChamado" Content="Enviar Resposta" HorizontalAlignment="Left" Margin="1014,480,0,0" VerticalAlignment="Top" Width="174" Height="28"/>
+                    <Label Content="Data do Chamado:" HorizontalAlignment="Left" Margin="247,433,0,0" VerticalAlignment="Top" Width="170" Height="40" FontSize="17"/>
+                    <Label Content="Visualizar Chamados" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="282" FontSize="30"/>
+                    <Label Content="Código do Chamado:" HorizontalAlignment="Left" Margin="26,144,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20"/>
+                    <Image HorizontalAlignment="Left" Height="173" Margin="617,44,0,0" VerticalAlignment="Top" Width="173" Source="Imagens/software-clipart-broken-computer-770972-3364939.png">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Imagens/software-clipart-broken-computer-770972-3364939.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Window>
