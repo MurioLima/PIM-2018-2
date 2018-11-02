@@ -247,6 +247,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Sem Título-1.png" />
+    <Resource Include="icone salvar produto.png" />
+    <Resource Include="excluir produto.png" />
+    <Resource Include="Icone botao Editar produto.png" />
     <Content Include="Modelo\EvolutionEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EvolutionEntity.edmx</DependentUpon>

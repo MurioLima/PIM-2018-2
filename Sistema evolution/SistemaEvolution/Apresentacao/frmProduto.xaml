@@ -20,7 +20,12 @@
                     <Label Content="Descrição do Produto:" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbDescProduto" HorizontalAlignment="Left" Height="188" Margin="247,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="20" MaxLines="5" MaxLength="100" RenderTransformOrigin="1,1"/>
                     <Label Content="Cadastrar Produto" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30"/>
-                    <Button x:Name="btnCadastrarProduto" Content="Cadastrar Produto" HorizontalAlignment="Left" Margin="1014,480,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnCadastrarProduto_Click" />
+                    <Button x:Name="btnCadastrarProduto" HorizontalAlignment="Left" Margin="1088,476,0,0" VerticalAlignment="Top" Width="62" Height="65" Click="btnCadastrarProduto_Click" Background="{x:Null}" >
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="60" Source="/SistemaEvolution;component/Sem Título-1.png" Stretch="Fill" Width="60"/>
+                    </Button>
                     <Image HorizontalAlignment="Left" Height="160" Margin="1000,42,0,0" VerticalAlignment="Top" Width="158" Source="Imagens/produto.png">
                         <Image.OpacityMask>
                             <ImageBrush ImageSource="Imagens/produto.png"/>
@@ -28,7 +33,7 @@
                     </Image>
                     <TextBox x:Name="txbCodCliente" HorizontalAlignment="Left" Height="40" Margin="444,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" TextChanged="TextBox_TextChanged" FontSize="20"/>
                     <Label Content="Cliente:" HorizontalAlignment="Left" Margin="364,147,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Button x:Name="btnBuscarProduto1" Content="Buscar Cliente" HorizontalAlignment="Left" Margin="740,144,0,0" VerticalAlignment="Top" Width="94" Height="40" Click="Button_Click"/>
+                    <Label Content="Cadastrar" HorizontalAlignment="Left" Margin="1083,537,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
 
 
                 </Grid>
@@ -45,8 +50,18 @@
                     <TextBox x:Name="txbEdCodProduto" HorizontalAlignment="Left" Height="40" Margin="184,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
                     <Label Content="Descrição do Produto:" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbEdDescricaoProduto" HorizontalAlignment="Left" Height="188" Margin="247,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="20" MaxLines="5" MaxLength="100"/>
-                    <Button x:Name="btnEditarProduto" Content="Editar Produto" HorizontalAlignment="Left" Margin="802,480,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnEditarProduto_Click"/>
-                    <Button x:Name="btnExcluirProduto" Content="Excluir Produto" HorizontalAlignment="Left" Margin="997,480,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btnExcluirProduto_Click"/>
+                    <Button x:Name="btnEditarProduto" HorizontalAlignment="Left" Margin="1024,476,0,0" VerticalAlignment="Top" Width="62" Height="65" Click="btnEditarProduto_Click" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="60" Source="/SistemaEvolution;component/Sem Título-1.png" Stretch="Fill" Width="60"/>
+                    </Button>
+                    <Button x:Name="btnExcluirProduto" HorizontalAlignment="Left" Margin="1122,476,0,0" VerticalAlignment="Top" Width="65" Height="63" Click="btnExcluirProduto_Click" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="60" Source="/SistemaEvolution;component/excluir produto.png" Stretch="Fill" Width="60"/>
+                    </Button>
 
                     <Image HorizontalAlignment="Left" Height="160" Margin="1013,45,0,0" VerticalAlignment="Top" Width="158" Source="Imagens/produto.png">
                         <Image.OpacityMask>
@@ -56,6 +71,8 @@
                     <Button x:Name="btnBuscarProduto" Content="Buscar" HorizontalAlignment="Left" Margin="358,156,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscarProduto_Click"/>
                     <Label Content="Label" HorizontalAlignment="Left" Margin="485,160,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txbEDCodCliente" HorizontalAlignment="Left" Height="23" Margin="581,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Excluir" HorizontalAlignment="Left" Margin="1127,534,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+                    <Label Content="Editar" HorizontalAlignment="Left" Margin="1031,534,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
 
                 </Grid>
             </TabItem>
