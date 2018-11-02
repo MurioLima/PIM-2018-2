@@ -25,7 +25,7 @@ namespace SistemaEvolution.DAL
             catch (EntryPointNotFoundException e)
             {
 
-                this.mensagem = e.ToString();
+                this.mensagem = "Código do produto ja cadastrado, digite outro código.";
             }
         }
 

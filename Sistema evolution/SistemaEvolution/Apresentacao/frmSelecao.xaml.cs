@@ -34,8 +34,6 @@ namespace SistemaEvolution.Apresentacao
             this.Close();
         }
 
-        
-
 
         private void dtgSelecao_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

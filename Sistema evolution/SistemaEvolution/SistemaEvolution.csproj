@@ -85,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Apresentacao\frmSelecaoFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Apresentacao\frmUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +118,9 @@
     </Compile>
     <Compile Include="Apresentacao\frmSelecao.xaml.cs">
       <DependentUpon>frmSelecao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmSelecaoFuncionario.xaml.cs">
+      <DependentUpon>frmSelecaoFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frmUsuario.xaml.cs">
       <DependentUpon>frmUsuario.xaml</DependentUpon>

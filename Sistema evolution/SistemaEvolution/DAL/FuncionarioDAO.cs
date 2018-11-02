@@ -10,7 +10,6 @@ namespace SistemaEvolution.DAL
 {
     public class FuncionarioDAO
     {
-
         EvolutionEntities Funcionario = new EvolutionEntities();
         public String mensagem;
 
@@ -21,13 +20,13 @@ namespace SistemaEvolution.DAL
             {
                 Funcionario.Funcionario.Add(funcionario);
                 Funcionario.SaveChanges();
-                this.mensagem = "Funcionário cadastrado com sucesso";
+                this.mensagem = "Funcionario cadastrado com sucesso";
             }
 
-            catch (EntryPointNotFoundException e)
+            catch (Exception e)
             {
 
-                this.mensagem = e.ToString();
+                this.mensagem = "Código do funcionário ja cadastrado,digite outro código.";
             }
 
         }
@@ -46,13 +45,13 @@ namespace SistemaEvolution.DAL
             List<Modelo.Funcionario> listaFuncionario = new List<Modelo.Funcionario>();
             IQueryable lista = from Funcionario in Funcionario.Funcionario
                                where
-                                   Funcionario.Nome_Completo.Contains(Funcionario.Nome_Completo)
+                                   Funcionario.Nome_Completo.Contains(funcionario.Nome_Completo)
                                select Funcionario;
             foreach (Modelo.Funcionario p in lista)
             {
                 listaFuncionario.Add(p);
             }
-            return listaFuncionario;
+            return listaFuncionario; ;
 
         }
 
@@ -72,12 +71,11 @@ namespace SistemaEvolution.DAL
             Funcionario.SaveChanges();
             this.mensagem = "Funcionário editado com sucesso !!!!!";
         }
-        }
 
     }
 
 
-
+}
 
     
 

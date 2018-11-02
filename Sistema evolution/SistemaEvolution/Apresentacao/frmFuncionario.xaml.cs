@@ -59,7 +59,7 @@ namespace SistemaEvolution.Apresentacao
             {
                 MessageBox.Show("Não existe resposta para esta consulta");
             }
-            else
+            if (Modelo.atbEstaticos.listaFuncionarioEstatico.Count() == 1)
             {
                 funcionario = Modelo.atbEstaticos.listaFuncionarioEstatico[0];
                 txbEDCodFuncionario.Text = funcionario.Cod_Funcionario;
@@ -69,6 +69,20 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEndereco.Text = funcionario.End_Completo;
                 txbEDTelefone.Text = funcionario.Telefone;
                 txbEDEmailContato.Text = funcionario.Email_Contato;
+            }
+            if (Modelo.atbEstaticos.listaFuncionarioEstatico.Count >= 2)
+            {
+                frmSelecaoFuncionario frmS = new frmSelecaoFuncionario();
+                frmS.ShowDialog();
+                txbEDCodFuncionario.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Cod_Funcionario.ToString();
+                txbEDNomeCompleto.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Nome_Completo.ToString();
+                txbEDNomeTratamento.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Nome_Tratamento.ToString();
+                txbEDCpf.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].CPF.ToString();
+                txbEDEndereco.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].End_Completo.ToString();
+                txbEDTelefone.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Telefone.ToString();
+                txbEDEmailContato.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Email_Contato.ToString();
+
+
             }
         }
 

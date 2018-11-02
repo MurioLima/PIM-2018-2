@@ -12,26 +12,26 @@ namespace SistemaEvolution.DAL
     {
 
         //Declaraçao das variaveis 
+
         EvolutionEntities Cliente = new EvolutionEntities();
         public String mensagem;
 
         //Codigo para Cadastrar o Cliente
-        public void CadastrarCliente(Modelo.Cliente cliente)
-            
+        public void CadastrarCliente(Modelo.Cliente cliente)   
         {
-            this.mensagem="";
             try
-            {               
+            {
                 Cliente.Cliente.Add(cliente);
                 Cliente.SaveChanges();
                 this.mensagem = "Cliente cadastrado com sucesso";
-            }
 
-            catch (EntryPointNotFoundException e)
+            }
+            catch (Exception e)
             {
 
-                this.mensagem = e.ToString();
+                this.mensagem = "Código do cliente ja cadastrado,digite outro código.";
             }
+
         }
 
         //Codigo para Pesquisar o Cliente pelo ID
@@ -73,20 +73,13 @@ namespace SistemaEvolution.DAL
         //Codigo para Editar o Cliente
         public void EditarCliente (Modelo.Cliente cliente)
         {
+            
             this.mensagem = "";
             Cliente.Entry(cliente).State = System.Data.EntityState.Modified;
             Cliente.SaveChanges();
             this.mensagem= "Pessoa editada com sucesso !!!!!";
-
-
         }
-
-
-
         }
-
-
-
 
     }
     

@@ -31,6 +31,7 @@ namespace SistemaEvolution.Apresentacao
 
         private void btnCadastrarUsuario_Click(object sender, RoutedEventArgs e)
         {
+
             List<String> ListaCliente = new List<string>();
             ListaCliente.Add(txbCodCliente.Text);
             ListaCliente.Add(txbNome.Text);
@@ -41,9 +42,13 @@ namespace SistemaEvolution.Apresentacao
             ListaCliente.Add(txbEndereço.Text);          
             ListaCliente.Add(txbTelefone.Text);
 
+            Modelo.EvolutionEntities status = new Modelo.EvolutionEntities();
             Modelo.Controle controle = new Modelo.Controle();
             controle.CadastrarCliente(ListaCliente);
             MessageBox.Show(controle.mensagem);
+
+
+            
 
             
         }
