@@ -24,10 +24,7 @@ namespace SistemaEvolution.Apresentacao
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
 
         private void btnCadastrarProduto_Click(object sender, RoutedEventArgs e)
         {
@@ -56,15 +53,24 @@ namespace SistemaEvolution.Apresentacao
             Modelo.Controle controle = new Modelo.Controle();
             controle.PesquisarProduto(ListaProduto);
             Modelo.Produto produto = new Modelo.Produto();
+            if (Modelo.atbEstaticos.listaProdutoEstatico == null)
+            {
+                MessageBox.Show("Nome Invalido");
+            }
+            else
             if (Modelo.atbEstaticos.listaProdutoEstatico.Count() == 0)
             {
                 MessageBox.Show("Não existe resposta para esta consulta");
             }
+
             else
+            if (Modelo.atbEstaticos.listaProdutoEstatico.Count() == 1)
             {
                 produto = Modelo.atbEstaticos.listaProdutoEstatico[0];
                 txbEdCodProduto.Text = produto.Cod_Produto;
                 txbEdDescricaoProduto.Text = produto.Desc_Produto;
+                txbEDCodCliente.Text = produto.Cod_Cliente;
+                
                 
             }
         }
@@ -92,6 +98,11 @@ namespace SistemaEvolution.Apresentacao
                 controle.ExcluirProduto(ListaProduto);
                 MessageBox.Show(controle.mensagem);
             }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

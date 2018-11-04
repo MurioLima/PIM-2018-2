@@ -15,7 +15,6 @@ namespace SistemaEvolution.DAL
 
         public void CadastrarFuncionario(Modelo.Funcionario funcionario)
         {
-            this.mensagem = "";
             try
             {
                 Funcionario.Funcionario.Add(funcionario);

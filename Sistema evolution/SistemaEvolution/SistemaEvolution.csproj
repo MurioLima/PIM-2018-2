@@ -251,6 +251,7 @@
     <Resource Include="icone salvar produto.png" />
     <Resource Include="excluir produto.png" />
     <Resource Include="Icone botao Editar produto.png" />
+    <Resource Include="Icone Buscar.png" />
     <Content Include="Modelo\EvolutionEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EvolutionEntity.edmx</DependentUpon>

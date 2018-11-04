@@ -91,6 +91,7 @@ namespace SistemaEvolution.Modelo
                 Cliente cliente = new Cliente();
                 cliente.Cod_Cliente = validacao.Cod_Cliente;
                 DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
+
                 if (clienteDAO.PesquisarCliente(cliente).Nome != null)
                 {
                     clienteDAO.ExcluirCliente(cliente);
@@ -165,7 +166,7 @@ namespace SistemaEvolution.Modelo
             this.mensagem = "";
             Funcionario funcionario = new Funcionario();
             Validacao validacao = new Validacao();
-            validacao.ValidarDadosCliente(ListaFuncionario);
+            validacao.ValidarDadosFuncionario(ListaFuncionario);
             if (validacao.mensagem.Equals(""))
             {
                 funcionario.Cod_Funcionario = validacao.Cod_Funcionario;
@@ -180,7 +181,8 @@ namespace SistemaEvolution.Modelo
             return funcionario;
         }
 
-        public void PesquisarFuncionarioPorNome(List<String> ListaFuncionario)
+
+    public void PesquisarFuncionarioPorNome(List<String> ListaFuncionario)
         {
             this.mensagem = "";
             Validacao validacao = new Validacao();
@@ -285,6 +287,7 @@ namespace SistemaEvolution.Modelo
                 DAL.ProdutoDAO ProdutoDAO = new DAL.ProdutoDAO();
                 Produto produto = new Produto();
                 produto.Cod_Produto = ListaProduto[0];
+                produto.Cod_Cliente = ListaProduto[2];
                 atbEstaticos.listaProdutoEstatico = ProdutoDAO.PesquisarProduto(produto);
             }
             else
@@ -294,7 +297,8 @@ namespace SistemaEvolution.Modelo
 
         }
 
-        public void EditarProduto(List<String> ListaProduto)
+
+    public void EditarProduto(List<String> ListaProduto)
         {
             this.mensagem = "";
             Validacao validacao = new Validacao();

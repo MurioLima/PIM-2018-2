@@ -68,9 +68,14 @@
                             <ImageBrush ImageSource="Imagens/produto.png"/>
                         </Image.OpacityMask>
                     </Image>
-                    <Button x:Name="btnBuscarProduto" Content="Buscar" HorizontalAlignment="Left" Margin="358,156,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscarProduto_Click"/>
-                    <Label Content="Label" HorizontalAlignment="Left" Margin="485,160,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txbEDCodCliente" HorizontalAlignment="Left" Height="23" Margin="581,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnBuscarProduto" HorizontalAlignment="Left" Margin="383,144,0,0" VerticalAlignment="Top" Width="60" Click="btnBuscarProduto_Click" Height="40">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="40" Source="/SistemaEvolution;component/Icone Buscar.png" Stretch="Fill" Width="58"/>
+                    </Button>
+                    <Label Content="Código do Cliente:" HorizontalAlignment="Left" Margin="472,144,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBox x:Name="txbEDCodCliente" HorizontalAlignment="Left" Height="40" Margin="651,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20"/>
                     <Label Content="Excluir" HorizontalAlignment="Left" Margin="1127,534,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
                     <Label Content="Editar" HorizontalAlignment="Left" Margin="1031,534,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
 

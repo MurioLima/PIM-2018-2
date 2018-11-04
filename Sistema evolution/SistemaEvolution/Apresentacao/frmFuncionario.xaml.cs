@@ -55,10 +55,16 @@ namespace SistemaEvolution.Apresentacao
             Modelo.Controle controle = new Modelo.Controle();
             controle.PesquisarFuncionarioPorNome(ListaFuncionario);
             Modelo.Funcionario funcionario = new Modelo.Funcionario();
+            if (Modelo.atbEstaticos.listaFuncionarioEstatico == null)
+            {
+                MessageBox.Show("Campo Nome está vazio");
+            }
+            else
             if (Modelo.atbEstaticos.listaFuncionarioEstatico.Count() == 0)
             {
                 MessageBox.Show("Não existe resposta para esta consulta");
             }
+            else
             if (Modelo.atbEstaticos.listaFuncionarioEstatico.Count() == 1)
             {
                 funcionario = Modelo.atbEstaticos.listaFuncionarioEstatico[0];
@@ -70,6 +76,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDTelefone.Text = funcionario.Telefone;
                 txbEDEmailContato.Text = funcionario.Email_Contato;
             }
+            else
             if (Modelo.atbEstaticos.listaFuncionarioEstatico.Count >= 2)
             {
                 frmSelecaoFuncionario frmS = new frmSelecaoFuncionario();

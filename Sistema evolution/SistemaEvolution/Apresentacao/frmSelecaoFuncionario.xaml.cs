@@ -22,6 +22,7 @@ namespace SistemaEvolution.Apresentacao
         public frmSelecaoFuncionario()
         {
             InitializeComponent();
+            InicializarDTG();
         }
         public void InicializarDTG()
         {
@@ -33,6 +34,11 @@ namespace SistemaEvolution.Apresentacao
             Modelo.atbEstaticos.listaFuncionarioEstatico.Clear();
             Modelo.atbEstaticos.listaFuncionarioEstatico.Add(
                 (Modelo.Funcionario)dtgSelecaoFuncionario.SelectedItem);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

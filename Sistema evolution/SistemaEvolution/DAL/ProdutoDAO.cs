@@ -22,11 +22,13 @@ namespace SistemaEvolution.DAL
                 this.mensagem = "Produto cadastrado com sucesso";
 
             }
-            catch (EntryPointNotFoundException e)
+            catch (Exception e)
             {
 
                 this.mensagem = "Código do produto ja cadastrado, digite outro código.";
             }
+
+
         }
 
         //Codigo para Pesquisar o Produto pelo ID
@@ -54,9 +56,6 @@ namespace SistemaEvolution.DAL
             Produto.SaveChanges();
             this.mensagem = "Produto excluída com sucesso !!!!!";
 
-
-
-
         }
 
         public void EditarProduto(Modelo.Produto produto)
@@ -72,23 +71,4 @@ namespace SistemaEvolution.DAL
 }
 
 
-//        //Codigo para Excluir o Cliente
-//        public void ExcluirProduto(Modelo.Produto produto)
-//        {
-//            this.mensagem = "";
-//            produto = Produto.Produto.Find(produto.Cod_Produto);
-//            Produto.Cliente.Remove(cliente);
-//            Cliente.SaveChanges();
-//            this.mensagem = "Pessoa excluída com sucesso !!!!!";
-//        }
 
-//        //Codigo para Editar o Cliente
-//        public void EditarCliente(Modelo.Cliente cliente)
-//        {
-//            this.mensagem = "";
-//            Cliente.Entry(cliente).State = System.Data.EntityState.Modified;
-//            Cliente.SaveChanges();
-//            this.mensagem = "Pessoa editada com sucesso !!!!!";
-//        }
-//    }
-//}

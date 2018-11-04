@@ -11,13 +11,7 @@
             <RowDefinition/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <Menu HorizontalAlignment="Left" Height="84" Margin="10,10,0,0" VerticalAlignment="Top" Width="1358">
-            <MenuItem x:Name="mniPaginaInicial" Header="" Height="100" Width="164" FontSize="18" Focusable="False">
-                <MenuItem.Background>
-                    <ImageBrush ImageSource="Imagens/Layout botao pagina inicial.png"/>
-                </MenuItem.Background>
-
-            </MenuItem>
+        <Menu HorizontalAlignment="Left" Height="84" Margin="155,10,0,0" VerticalAlignment="Top" Width="1092">
             <MenuItem x:Name="mniPaginaCadastros" Header="" Height="100" Width="164" FontSize="18">
                 <MenuItem.Background>
                     <ImageBrush ImageSource="Imagens/Layout botao cadastros.png" Stretch="Fill" TileMode="FlipX"/>
@@ -68,6 +62,8 @@
                 <ImageBrush ImageSource="Imagens/logoSistema.png"/>
             </Image.OpacityMask>
         </Image>
+        <Image HorizontalAlignment="Left" Height="94" VerticalAlignment="Top" Width="150"/>
+        <Image Margin="0,7,1102,496" Source="/SistemaEvolution;component/Layout botao pagina inicial.png" Stretch="Fill"/>
 
     </Grid>
 </Window>

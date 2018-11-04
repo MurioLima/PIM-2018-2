@@ -8,6 +8,16 @@
         Title="frmSelecaoFuncionario" Height="627.973" Width="1264.603">
     <Grid>
         <DataGrid x:Name="dtgSelecaoFuncionario" HorizontalAlignment="Left" Height="464" Margin="10,19,0,0" VerticalAlignment="Top" Width="1237" Background="{x:Null}" SelectionChanged="dtgSelecaoFuncionario_SelectionChanged"/>
+        <Button Content="Confirmar" HorizontalAlignment="Left" Margin="960,515,0,0" VerticalAlignment="Top" Width="141" Height="34" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.105"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>

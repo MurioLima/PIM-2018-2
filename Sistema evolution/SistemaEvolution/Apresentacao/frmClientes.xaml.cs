@@ -26,7 +26,7 @@ namespace SistemaEvolution.Apresentacao
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void btnCadastrarUsuario_Click(object sender, RoutedEventArgs e)
@@ -41,16 +41,10 @@ namespace SistemaEvolution.Apresentacao
             ListaCliente.Add(txbEmail_Contato.Text);
             ListaCliente.Add(txbEndereço.Text);          
             ListaCliente.Add(txbTelefone.Text);
-
             Modelo.EvolutionEntities status = new Modelo.EvolutionEntities();
             Modelo.Controle controle = new Modelo.Controle();
             controle.CadastrarCliente(ListaCliente);
             MessageBox.Show(controle.mensagem);
-
-
-            
-
-            
         }
 
         private void btnBuscarCliente_Click(object sender, RoutedEventArgs e)
@@ -83,7 +77,7 @@ namespace SistemaEvolution.Apresentacao
                 MessageBox.Show(controle.mensagem);
             }
 
-            }
+        }
 
         private void btnBuscarNome_Click(object sender, RoutedEventArgs e)
         {
@@ -99,10 +93,16 @@ namespace SistemaEvolution.Apresentacao
             Modelo.Controle controle = new Modelo.Controle();
             controle.PesquisarClientePorNome(ListaCliente);
             Modelo.Cliente cliente = new Modelo.Cliente();
-            if (Modelo.atbEstaticos.listaClienteEstatico.Count()==0)
+            if(Modelo.atbEstaticos.listaClienteEstatico==null)
+            {
+                MessageBox.Show("Campo Nome está vazio");
+            }
+            else
+            if (Modelo.atbEstaticos.listaClienteEstatico.Count() ==0)
             {
                 MessageBox.Show("Não existe resposta para esta consulta");
             }
+            else
             if (Modelo.atbEstaticos.listaClienteEstatico.Count() == 1)
             {
                 cliente = Modelo.atbEstaticos.listaClienteEstatico[0];
@@ -115,6 +115,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEndereco.Text = cliente.End_Completo;
                 txbEDTelefone.Text = cliente.Telefone;
             }
+            else
             if (Modelo.atbEstaticos.listaClienteEstatico.Count >= 2)
             {
                 frmSelecao frmS = new frmSelecao();
@@ -158,6 +159,11 @@ namespace SistemaEvolution.Apresentacao
             Modelo.Controle controle = new Modelo.Controle();
             controle.EditarCliente(ListaCliente);
             MessageBox.Show(controle.mensagem);
+        }
+
+        private void rdbStatusClienteInativo_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
     }

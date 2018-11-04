@@ -54,7 +54,7 @@
                     </Button>
                     <Label Content="Cadastrar Cliente" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="273" FontSize="30"/>
                     <RadioButton x:Name="rdbStatusClienteAtivo" Content="Ativo" HorizontalAlignment="Left" Margin="964,414,0,0" VerticalAlignment="Top" FontSize="20" Checked="RadioButton_Checked" Height="27" Width="82"/>
-                    <RadioButton x:Name="rdbStatusClienteInativo" Content=" Inativo" HorizontalAlignment="Left" Margin="1044,414,0,0" VerticalAlignment="Top" Height="32" Width="92" FontSize="20"/>
+                    <RadioButton x:Name="rdbStatusClienteInativo" Content=" Inativo" HorizontalAlignment="Left" Margin="1044,414,0,0" VerticalAlignment="Top" Height="32" Width="92" FontSize="20" Checked="rdbStatusClienteInativo_Checked"/>
                     <Label Content="Status Cliente:" HorizontalAlignment="Left" Margin="824,408,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label Content="Cadastrar" HorizontalAlignment="Left" Margin="1110,532,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
 
