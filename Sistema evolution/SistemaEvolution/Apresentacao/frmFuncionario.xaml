@@ -10,36 +10,41 @@
         <TabControl HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="1265">
             <TabItem x:Name="tbcCadastrarFuncionario" Header="Cadastrar Funcionário">
                 <Grid Background="#FFE5E5E5">
-                    <Image HorizontalAlignment="Left" Height="504" Margin="136,32,0,0" VerticalAlignment="Top" Width="1000" Source="Imagens/logoSistema.png" Opacity="0.04">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="76*"/>
+                        <ColumnDefinition Width="92*"/>
+                        <ColumnDefinition Width="1091*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image HorizontalAlignment="Left" Height="504" Margin="60.06,32,0,0" VerticalAlignment="Top" Width="1000" Source="Imagens/logoSistema.png" Opacity="0.04" Grid.ColumnSpan="2" Grid.Column="1">
                         <Image.OpacityMask>
                             <ImageBrush ImageSource="Imagens/logoSistema.png"/>
                         </Image.OpacityMask>
                     </Image>
-                    <Label x:Name="lblCodFuncionario" Content="Código Funcionário:" HorizontalAlignment="Left" Margin="26,120,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top"/>
-                    <Label x:Name="lblNomeCompleto" Content="Nome Completo:" HorizontalAlignment="Left" Margin="26,194,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top"/>
-                    <Label x:Name="lblNomeTratamento" Content="Nome Tratamento:" HorizontalAlignment="Left" Margin="26,265,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top"/>
-                    <Label x:Name="lblCpf" Content="CPF:" HorizontalAlignment="Left" Margin="26,336,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txbCodFuncionario" HorizontalAlignment="Left" Height="40" Margin="216,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
-                    <TextBox x:Name="txbNomeCompleto" HorizontalAlignment="Left" Height="40" Margin="205,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" FontSize="20" MaxLines="1" MaxLength="50"/>
-                    <TextBox x:Name="txbNomeTratamento" HorizontalAlignment="Left" Height="40" Margin="206,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="624" FontSize="20" MaxLength="30" MaxLines="1"/>
-                    <TextBox x:Name="txbCpf" HorizontalAlignment="Left" Height="40" Margin="79,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="20" MaxLength="11" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
-                    <Label x:Name="lblEndereco" Content="Endereço Completo:" HorizontalAlignment="Left" Margin="26,407,0,0" Width="188" Height="40" FontSize="20" VerticalAlignment="Top"/>
-                    <Label x:Name="lblTelefone" Content="Telefone:" HorizontalAlignment="Left" Margin="396,336,0,0" Width="186" Height="40" FontSize="20" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="40" Margin="496,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1"/>
-                    <TextBox x:Name="txbEndereço" HorizontalAlignment="Left" Height="40" Margin="220,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
-                    <Label Content="Cadastrar Funcionário" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="312" FontSize="30"/>
-                    <Button x:Name="btnCadastrarFuncionario" HorizontalAlignment="Left" Margin="589,481,0,0" VerticalAlignment="Top" Width="63" Height="64" Click="btnCadastrarFuncionario_Click_1" Background="{x:Null}" >
+                    <Label x:Name="lblCodFuncionario" Content="Código Funcionário:" HorizontalAlignment="Left" Margin="26,120,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                    <Label x:Name="lblNomeCompleto" Content="Nome Completo:" HorizontalAlignment="Left" Margin="26,194,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                    <Label x:Name="lblNomeTratamento" Content="Nome Tratamento:" HorizontalAlignment="Left" Margin="26,265,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                    <Label x:Name="lblCpf" Content="CPF:" HorizontalAlignment="Left" Margin="26,336,0,0" Width="185" Height="40" FontSize="20" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="txbCodFuncionario" HorizontalAlignment="Left" Height="40" Margin="48,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5" Grid.Column="2"/>
+                    <TextBox x:Name="txbNomeCompleto" HorizontalAlignment="Left" Height="40" Margin="37,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" FontSize="20" MaxLines="1" MaxLength="50" Grid.Column="2"/>
+                    <TextBox x:Name="txbNomeTratamento" HorizontalAlignment="Left" Height="40" Margin="38,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="624" FontSize="20" MaxLength="30" MaxLines="1" Grid.Column="2"/>
+                    <TextBox x:Name="txbCpf" HorizontalAlignment="Left" Height="40" Margin="3.06,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="20" MaxLength="11" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Label x:Name="lblEndereco" Content="Endereço Completo:" HorizontalAlignment="Left" Margin="26,407,0,0" Width="188" Height="40" FontSize="20" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                    <Label x:Name="lblTelefone" Content="Telefone:" HorizontalAlignment="Left" Margin="228,336,0,0" Width="186" Height="40" FontSize="20" VerticalAlignment="Top" Grid.Column="2"/>
+                    <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="40" Margin="328,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1" Grid.Column="2"/>
+                    <TextBox x:Name="txbEndereço" HorizontalAlignment="Left" Height="40" Margin="52,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="2"/>
+                    <Label Content="Cadastrar Funcionário" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="312" FontSize="30" Grid.ColumnSpan="3"/>
+                    <Button x:Name="btnCadastrarFuncionario" HorizontalAlignment="Left" Margin="421,481,0,0" VerticalAlignment="Top" Width="63" Height="64" Click="btnCadastrarFuncionario_Click_1" Background="{x:Null}" Grid.Column="2" >
                         <Button.BorderBrush>
                             <SolidColorBrush Color="#FF707070" Opacity="0"/>
                         </Button.BorderBrush>
                         <Image Height="60" Source="/SistemaEvolution;component/business_application_addmale_useradd_insert_add_user_client_2312.png" Stretch="Fill" Width="60"/>
                     </Button>
-                    <RadioButton x:Name="rdbEDStatusFuncionarioAtivo" Content="Ativo" HorizontalAlignment="Left" Margin="1024,474,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <RadioButton x:Name="rdbEDStatusFuncionarioInativo" Content="Inativo" HorizontalAlignment="Left" Margin="1110,474,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label Content="Status Funcionário:" HorizontalAlignment="Left" Margin="841,468,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <TextBox x:Name="txbEmailContato" HorizontalAlignment="Left" Height="40" Margin="727,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontSize="20"/>
-                    <Label x:Name="lblEmailContato" Content="Email:" HorizontalAlignment="Left" Margin="660,120,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label Content="Cadastrar" HorizontalAlignment="Left" Margin="585,537,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+                    <RadioButton x:Name="rdbStatusFuncionarioAtivo" Content="Ativo" HorizontalAlignment="Left" Margin="856,474,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="2"/>
+                    <RadioButton x:Name="rdbStatusFuncionarioInativo" Content="Inativo" HorizontalAlignment="Left" Margin="942,474,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="2"/>
+                    <Label Content="Status Funcionário:" HorizontalAlignment="Left" Margin="673,468,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="2"/>
+                    <TextBox x:Name="txbEmailContato" HorizontalAlignment="Left" Height="40" Margin="559,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontSize="20" Grid.Column="2"/>
+                    <Label x:Name="lblEmailContato" Content="Email:" HorizontalAlignment="Left" Margin="492,120,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="2"/>
+                    <Label Content="Cadastrar" HorizontalAlignment="Left" Margin="417,537,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Grid.Column="2"/>
 
                 </Grid>
             </TabItem>

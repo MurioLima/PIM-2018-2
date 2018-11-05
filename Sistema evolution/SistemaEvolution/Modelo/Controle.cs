@@ -29,6 +29,7 @@ namespace SistemaEvolution.Modelo
                 cliente.Email_Contato = ListaCliente[5];
                 cliente.End_Completo = ListaCliente[6];
                 cliente.Telefone = ListaCliente[7];
+                cliente.Stat_Cliente = ListaCliente[8];
                 DAL.ClienteDAO ClienteDAO = new DAL.ClienteDAO();
                 ClienteDAO.CadastrarCliente(cliente);
                 this.mensagem = ClienteDAO.mensagem;
@@ -150,6 +151,7 @@ namespace SistemaEvolution.Modelo
                 funcionario.End_Completo = ListaFuncionario[4];
                 funcionario.Telefone = ListaFuncionario[5];
                 funcionario.Email_Contato = ListaFuncionario[6];
+                funcionario.Stat_Funcionario = ListaFuncionario[7];
                 DAL.FuncionarioDAO FuncionarioDAO = new DAL.FuncionarioDAO();
                 FuncionarioDAO.CadastrarFuncionario(funcionario);
                 this.mensagem = FuncionarioDAO.mensagem;

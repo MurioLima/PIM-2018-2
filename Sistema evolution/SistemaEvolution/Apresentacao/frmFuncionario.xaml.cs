@@ -36,6 +36,10 @@ namespace SistemaEvolution.Apresentacao
             ListaFuncionario.Add(txbEndereço.Text);
             ListaFuncionario.Add(txbTelefone.Text);
             ListaFuncionario.Add(txbEmailContato.Text);
+            string stat_Funcionario = "";
+            if (rdbStatusFuncionarioAtivo.IsChecked == true) stat_Funcionario = "A";
+            if (rdbStatusFuncionarioInativo.IsChecked == true) stat_Funcionario = "I";
+            ListaFuncionario.Add(stat_Funcionario);
 
             Modelo.Controle controle = new Modelo.Controle();
             controle.CadastrarFuncionario(ListaFuncionario);

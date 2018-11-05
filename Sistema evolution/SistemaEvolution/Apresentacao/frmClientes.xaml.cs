@@ -41,6 +41,12 @@ namespace SistemaEvolution.Apresentacao
             ListaCliente.Add(txbEmail_Contato.Text);
             ListaCliente.Add(txbEndereço.Text);          
             ListaCliente.Add(txbTelefone.Text);
+            string Stat_Cliente = "";
+                if (rdbStatusClienteAtivo.IsChecked == true) Stat_Cliente = "A";
+                if (rdbStatusClienteInativo.IsChecked == true) Stat_Cliente = "I";
+            ListaCliente.Add(Stat_Cliente);
+            
+
             Modelo.EvolutionEntities status = new Modelo.EvolutionEntities();
             Modelo.Controle controle = new Modelo.Controle();
             controle.CadastrarCliente(ListaCliente);
