@@ -11,7 +11,9 @@ namespace SistemaEvolution.Modelo
     {
 
 
-        // Abaixo Crud cliente
+        //Crud cliente ↓
+
+        //Código do Cadastrar cliente ↓
         public String mensagem;
         public void CadastrarCliente(List<String> ListaCliente)
         {
@@ -41,7 +43,7 @@ namespace SistemaEvolution.Modelo
 
         }
 
-
+        //Código do Pesquisar pelo id cliente ↓
         public Modelo.Cliente PesquisarCliente(List<String> ListaCliente)
         {
             this.mensagem = "";
@@ -62,7 +64,7 @@ namespace SistemaEvolution.Modelo
             return cliente;
         }
 
-
+        //Código do Pesquisar pelo nome cliente ↓
         public void PesquisarClientePorNome(List<String> ListaCliente)
         {
             this.mensagem = "";
@@ -81,7 +83,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
-
+        //Código do Excluir cliente ↓
         public void ExcluirCliente(List<String> ListaCliente)
         {
             this.mensagem = "";
@@ -105,6 +107,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código do Editar cliente ↓
         public void EditarCliente(List<String> ListaCliente)
         {
             this.mensagem = "";
@@ -134,9 +137,9 @@ namespace SistemaEvolution.Modelo
         }
 
 
-        // Abaixo Crud Funcionario
+        //Crud Funcionario ↓ 
 
-
+        //Código do Cadastrar funcionário ↓ 
         public void CadastrarFuncionario(List<String> ListaFuncionario)
         {
             this.mensagem = "";
@@ -164,6 +167,7 @@ namespace SistemaEvolution.Modelo
 
         }
 
+        //Código do Pesquisar funcionário ↓ 
         public Modelo.Funcionario PesquisarFuncionario(List<String> ListaFuncionario)
         {
             this.mensagem = "";
@@ -185,7 +189,8 @@ namespace SistemaEvolution.Modelo
         }
 
 
-    public void PesquisarFuncionarioPorNome(List<String> ListaFuncionario)
+        //Código do Pesquisar funcionário pelo nome ↓ 
+        public void PesquisarFuncionarioPorNome(List<String> ListaFuncionario)
         {
             this.mensagem = "";
             Validacao validacao = new Validacao();
@@ -203,6 +208,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código do Excluir funcionário ↓ 
         public void ExcluirFuncionario(List<String> ListaFuncionario)
         {
             this.mensagem = "";
@@ -229,6 +235,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código do Editar funcionário ↓ 
         public void EditarFuncionario(List<String> ListaFuncionario)
         {
             this.mensagem = "";
@@ -256,8 +263,10 @@ namespace SistemaEvolution.Modelo
             }
         }
 
-        //Abaixo Crud Produto
+        //Crud Produto ↓
 
+
+        //Código do Cadastrar Produto ↓ 
         public void CadastrarProduto(List<String> ListaProduto)
         {
             this.mensagem = "";
@@ -281,6 +290,8 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+
+        //Código do Pesquisar Produto ↓ 
         public void PesquisarProduto(List<String> ListaProduto)
         {
             this.mensagem = "";
@@ -302,7 +313,8 @@ namespace SistemaEvolution.Modelo
         }
 
 
-    public void EditarProduto(List<String> ListaProduto)
+        //Código do Editar Produto ↓ 
+        public void EditarProduto(List<String> ListaProduto)
         {
             this.mensagem = "";
             Validacao validacao = new Validacao();
@@ -327,7 +339,7 @@ namespace SistemaEvolution.Modelo
 
         }
 
-
+        //Código do Excluir Produto ↓ 
         public void ExcluirProduto(List<String> ListaProduto)
         {
             this.mensagem = "";
@@ -355,6 +367,10 @@ namespace SistemaEvolution.Modelo
 
         }
 
+
+        //Crud Usuário ↓
+
+        //Código do Cadastrar Usuário ↓ 
         public void CadastrarUsuario(List<String> ListaUsuario)
         {
             this.mensagem = "";
@@ -376,6 +392,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código do Pesquisar Usuário ↓
         public void PesquisarUsuario(List<String> ListaUsuario)
         {
             this.mensagem = "";
@@ -393,8 +410,9 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem = validacao.mensagem;
             }
-
         }
+
+        //Código do Editar Usuário ↓
         public void EditarUsuario(List<String> ListaUsuario)
         {
             this.mensagem = "";
@@ -419,8 +437,7 @@ namespace SistemaEvolution.Modelo
 
 
         }
-
-
+        //Código do Excluir Usuário ↓
         public void ExcluirUsuario(List<String> ListaUsuario)
         {
             this.mensagem = "";

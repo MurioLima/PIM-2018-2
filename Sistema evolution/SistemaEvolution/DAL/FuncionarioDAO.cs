@@ -10,9 +10,11 @@ namespace SistemaEvolution.DAL
 {
     public class FuncionarioDAO
     {
+        //Chamada do entity ↓
         EvolutionEntities Funcionario = new EvolutionEntities();
         public String mensagem;
 
+        //Código da comunicação do banco de dados para cadastrar o funcionário ↓
         public void CadastrarFuncionario(Modelo.Funcionario funcionario)
         {
             try
@@ -27,10 +29,9 @@ namespace SistemaEvolution.DAL
 
                 this.mensagem = "Código do funcionário ja cadastrado,digite outro código.";
             }
-
         }
 
-
+        //Código da comunicação do banco de dados para Pesquisar pelo id o funcionário ↓
         public Modelo.Funcionario PesquisarFuncionario(Modelo.Funcionario funcionario)
         {
             this.mensagem = "";
@@ -38,6 +39,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Código da comunicação do banco de dados para Pesquisar pelo nome o funcionário ↓
         public List<Modelo.Funcionario> PesquisarFuncionarioPorNome(Modelo.Funcionario funcionario)
         {
             this.mensagem = "";
@@ -54,6 +56,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Código da comunicação do banco de dados para Excluir o funcionário ↓
         public void ExcluirFuncionario(Modelo.Funcionario funcionario)
         {
             this.mensagem = "";
@@ -63,6 +66,7 @@ namespace SistemaEvolution.DAL
             this.mensagem = "Funcionário excluído com sucesso !!!!!";
         }
 
+        //Código da comunicação do banco de dados para Editar o funcionário ↓
         public void EditarFuncionario(Modelo.Funcionario funcionario)
         {
             this.mensagem = "";

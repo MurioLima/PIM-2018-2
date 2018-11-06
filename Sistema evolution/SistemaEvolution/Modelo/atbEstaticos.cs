@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace SistemaEvolution.Modelo
 {
+
+    // Lista estatica de todas as classe ↓
     public static class atbEstaticos
     {
         public static List<Cliente> listaClienteEstatico;

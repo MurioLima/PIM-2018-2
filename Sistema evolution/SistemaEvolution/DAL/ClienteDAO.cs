@@ -11,12 +11,12 @@ namespace SistemaEvolution.DAL
     public class ClienteDAO
     {
 
-        //Declaraçao das variaveis 
+        //Declaraçao das variaveis  ↓
 
         EvolutionEntities Cliente = new EvolutionEntities();
         public String mensagem;
 
-        //Codigo para Cadastrar o Cliente
+        //Codigo para Cadastrar o Cliente ↓
         public void CadastrarCliente(Modelo.Cliente cliente)   
         {
             try
@@ -34,7 +34,7 @@ namespace SistemaEvolution.DAL
 
         }
 
-        //Codigo para Pesquisar o Cliente pelo ID
+        //Codigo para Pesquisar o Cliente pelo ID ↓
         public Modelo.Cliente PesquisarCliente(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -42,7 +42,7 @@ namespace SistemaEvolution.DAL
 
         }
 
-        //Codigo para pesquisar o Cliente pelo nome
+        //Codigo para pesquisar o Cliente pelo nome ↓
         public List<Modelo.Cliente> PesquisarClientePorNome(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -60,7 +60,7 @@ namespace SistemaEvolution.DAL
 
         }
 
-        //Codigo para Excluir o Cliente
+        //Codigo para Excluir o Cliente ↓
         public void ExcluirCliente(Modelo.Cliente cliente)
         {
             this.mensagem = "";
@@ -70,7 +70,7 @@ namespace SistemaEvolution.DAL
             this.mensagem = "Pessoa excluída com sucesso !!!!!";
         }
 
-        //Codigo para Editar o Cliente
+        //Codigo para Editar o Cliente ↓
         public void EditarCliente (Modelo.Cliente cliente)
         {
             
