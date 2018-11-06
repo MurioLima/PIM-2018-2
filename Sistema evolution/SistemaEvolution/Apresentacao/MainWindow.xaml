@@ -11,12 +11,18 @@
         <Label x:Name="lblSenha" Content="Senha:" HorizontalAlignment="Left" Margin="112,293,0,0" VerticalAlignment="Top" Height="39" Width="68" FontSize="17"/>
         <TextBox x:Name="txbLogin" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Margin="116,247,0,0"/>
         <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="33" Margin="116,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <Button x:Name="btnLogar" Content="Logar" HorizontalAlignment="Left" Margin="147,404,0,0" VerticalAlignment="Top" Width="114" Height="30" Click="btnLogar_Click"/>
-        <Image HorizontalAlignment="Left" Height="132" Margin="132,76,0,0" VerticalAlignment="Top" Width="186" Source="Imagens/login.png">
+        <Button x:Name="btnLogar" HorizontalAlignment="Left" Margin="168,396,0,0" VerticalAlignment="Top" Width="62" Height="74" Click="btnLogar_Click" Background="{x:Null}">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Image Height="67" Source="/SistemaEvolution;component/botao logar.png" Stretch="Fill" Width="59"/>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="132" Margin="138,76,0,0" VerticalAlignment="Top" Width="186" Source="Imagens/icon-account.png">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="Imagens/login.png"/>
+                <ImageBrush ImageSource="Imagens/icon-account.png"/>
             </Image.OpacityMask>
         </Image>
+        <Label Content="Entrar" HorizontalAlignment="Left" Margin="179,462,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
 
     </Grid>
 </Window>

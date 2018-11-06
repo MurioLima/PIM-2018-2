@@ -26,6 +26,8 @@ namespace SistemaEvolution.Apresentacao
 
         private void mniPaginaUsuarios_Click(object sender, RoutedEventArgs e)
         {
+            Apresentacao.frmUsuario frmC = new Apresentacao.frmUsuario();
+            frmC.ShowDialog();
 
         }
 
