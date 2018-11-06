@@ -15,6 +15,7 @@ namespace SistemaEvolution.Modelo
         public String Cod_Cliente;
         public String Cod_Produto;
         public String Cod_Funcionario;
+        public String ID_usuario;
         
 
 
@@ -42,6 +43,7 @@ namespace SistemaEvolution.Modelo
                 this.mensagem = "Endereço com mais de 50 caracteres \n";
             if (ListaCliente[7].Length > 11)
                 this.mensagem = "Telefone com mais de 11 caracteres \n";
+
 
             try
             {
@@ -107,9 +109,23 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem += "ID inválido";
             }
+        }
+
+        public void ValidarDadosUsuario(List<String> ListaUsuario)
+        {
+            this.mensagem = "";
+            if(ListaUsuario[0].Length>5)
+                this.mensagem = "Codigo com mais de 5 caracteres \n";
+            try
+            {
+                this.ID_usuario = (ListaUsuario[0]);
+            }
+            catch (FormatException e)
+            {
+                this.mensagem += "ID inválido";
+            }
 
 
         }
-
     }
 }

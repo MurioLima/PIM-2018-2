@@ -155,6 +155,10 @@ namespace SistemaEvolution.Apresentacao
             ListaFuncionario.Add(txbEDEndereco.Text);
             ListaFuncionario.Add(txbEDTelefone.Text);
             ListaFuncionario.Add(txbEDEmailContato.Text);
+            string stat_Funcionario = "";
+            if (rdbEDStatusFuncionarioAtivo.IsChecked == true) stat_Funcionario = "A";
+            if (rdbEDStatusFuncionarioInativo.IsChecked == true) stat_Funcionario = "I";
+            ListaFuncionario.Add(stat_Funcionario);
             Modelo.Controle controle = new Modelo.Controle();
             controle.EditarFuncionario(ListaFuncionario);
             MessageBox.Show(controle.mensagem);

@@ -14,5 +14,7 @@ namespace SistemaEvolution.Modelo
 
         public static List<Produto> listaProdutoEstatico;
 
+        public static List<Usuario> listaUsuarioEstatico;
+
     }
 }

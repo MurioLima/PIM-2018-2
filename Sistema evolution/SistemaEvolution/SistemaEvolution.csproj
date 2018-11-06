@@ -255,6 +255,9 @@
     <Resource Include="Apresentacao\Imagens\icon-account.png" />
     <Resource Include="Icone adicionar usuario.png" />
     <Resource Include="botao logar.png" />
+    <Resource Include="Icone botao salvar produto.png" />
+    <Resource Include="Icone Editar usuario.png" />
+    <Resource Include="Icone botao adicionar pessoa.png" />
     <Content Include="Modelo\EvolutionEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EvolutionEntity.edmx</DependentUpon>

@@ -29,7 +29,7 @@ namespace SistemaEvolution.Modelo
                 cliente.Email_Contato = ListaCliente[5];
                 cliente.End_Completo = ListaCliente[6];
                 cliente.Telefone = ListaCliente[7];
-                cliente.Stat_Cliente = ListaCliente[8];
+                cliente.Stat_Cliente = ListaCliente[8]; 
                 DAL.ClienteDAO ClienteDAO = new DAL.ClienteDAO();
                 ClienteDAO.CadastrarCliente(cliente);
                 this.mensagem = ClienteDAO.mensagem;
@@ -122,6 +122,7 @@ namespace SistemaEvolution.Modelo
                 cliente.Email_Contato = ListaCliente[5];
                 cliente.End_Completo = ListaCliente[6];
                 cliente.Telefone = ListaCliente[7];
+                cliente.Stat_Cliente = ListaCliente[8];
                 DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
                 clienteDAO.EditarCliente(cliente);
                 this.mensagem = clienteDAO.mensagem;
@@ -244,6 +245,7 @@ namespace SistemaEvolution.Modelo
                 funcionario.End_Completo = ListaFuncionario[4];
                 funcionario.Telefone = ListaFuncionario[5];
                 funcionario.Email_Contato = ListaFuncionario[6];
+                funcionario.Stat_Funcionario = ListaFuncionario[7];
                 DAL.FuncionarioDAO funcionarioDAO = new DAL.FuncionarioDAO();
                 funcionarioDAO.EditarFuncionario(funcionario);
                 this.mensagem = funcionarioDAO.mensagem;
@@ -353,6 +355,98 @@ namespace SistemaEvolution.Modelo
 
         }
 
+        public void CadastrarUsuario(List<String> ListaUsuario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosUsuario(ListaUsuario);
+            if (validacao.mensagem.Equals(""))
+            {
+                Usuario usuario = new Usuario();
+                usuario.ID_usuario = ListaUsuario[0];
+                usuario.Senha = ListaUsuario[1];
+                usuario.Acesso = ListaUsuario[2];
+                DAL.UsuarioDAO UsuarioDAO = new DAL.UsuarioDAO();
+                UsuarioDAO.CadastrarUsuario(usuario);
+                this.mensagem = UsuarioDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+        public void PesquisarUsuario(List<String> ListaUsuario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosUsuario(ListaUsuario);
+            if (validacao.mensagem.Equals(""))
+            {
+                DAL.UsuarioDAO UsuarioDAO = new DAL.UsuarioDAO();
+                Usuario usuario = new Usuario();
+                usuario.ID_usuario = ListaUsuario[0];
+                usuario.Senha = ListaUsuario[1];
+                atbEstaticos.listaUsuarioEstatico = UsuarioDAO.PesquisarUsuario(usuario);
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+
+        }
+        public void EditarUsuario(List<String> ListaUsuario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosUsuario(ListaUsuario);
+            if (validacao.mensagem.Equals(""))
+            {
+                Usuario usuario = new Usuario();
+                usuario.ID_usuario = validacao.ID_usuario;
+                usuario.ID_usuario = ListaUsuario[0];
+                usuario.Senha = ListaUsuario[1];
+
+
+                DAL.UsuarioDAO usuarioDAO = new DAL.UsuarioDAO();
+                usuarioDAO.EditarUsuario(usuario);
+                this.mensagem = usuarioDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+
+
+        }
+
+
+        public void ExcluirUsuario(List<String> ListaUsuario)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosUsuario(ListaUsuario);
+            if (validacao.mensagem.Equals(""))
+            {
+                Usuario usuario = new Usuario();
+                usuario.ID_usuario = validacao.ID_usuario;
+                DAL.UsuarioDAO usuarioDAO = new DAL.UsuarioDAO();
+                if (usuarioDAO.PesquisarUsuario(usuario) != null)
+                {
+                    usuarioDAO.ExcluirUsuario(usuario);
+                    this.mensagem = usuarioDAO.mensagem;
+                }
+                else
+                {
+                    this.mensagem = "Não existe este ID";
+                }
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+
+        }
 
 
 

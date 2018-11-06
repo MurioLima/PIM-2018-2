@@ -16,17 +16,17 @@
                     <Label Content="Login:" HorizontalAlignment="Left" Margin="26,147,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbIdUsuario" HorizontalAlignment="Left" Height="40" Margin="98,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="5"/>
                     <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="40" Margin="98,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="5"/>
-                    <Label x:Name="Senha" Content="Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" Margin="26,241,0,0"/>
+                    <Label x:Name="Senha" Content="Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="40" FontSize="20" Margin="26,241,0,0"/>
                     <TextBox x:Name="txbConfirmarSenha" HorizontalAlignment="Left" Height="40" Margin="430,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="20" MaxLines="1" MaxLength="5"/>
                     <Label Content="Confirmar Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="186" Height="40" FontSize="20" Margin="264,241,0,0"/>
-                    <Button x:Name="btnCadastrarUsuario" HorizontalAlignment="Left" Margin="302,441,0,0" VerticalAlignment="Top" Width="62" Height="69" Background="{x:Null}">
+                    <Button x:Name="btnCadastrarUsuario" HorizontalAlignment="Left" Margin="302,441,0,0" VerticalAlignment="Top" Width="62" Height="69" Background="{x:Null}" Click="btnCadastrarUsuario_Click">
                         <Button.BorderBrush>
                             <SolidColorBrush Color="#FF707070" Opacity="0"/>
                         </Button.BorderBrush>
                         <Image Height="60" Source="/SistemaEvolution;component/Icone adicionar usuario.png" Stretch="Fill" Width="60"/>
                     </Button>
-                    <RadioButton x:Name="rbFuncionario" Content="Funcionário" HorizontalAlignment="Left" Margin="206,326,0,0" VerticalAlignment="Top" Height="34" Width="132" FontSize="20"/>
-                    <RadioButton x:Name="rbCliente" Content="Cliente" HorizontalAlignment="Left" Margin="206,360,0,0" VerticalAlignment="Top" Height="34" Width="108" FontSize="20"/>
+                    <RadioButton x:Name="rdbFuncionario" Content="Funcionário" HorizontalAlignment="Left" Margin="206,326,0,0" VerticalAlignment="Top" Height="34" Width="132" FontSize="20"/>
+                    <RadioButton x:Name="rdbCliente" Content="Cliente" HorizontalAlignment="Left" Margin="206,360,0,0" VerticalAlignment="Top" Height="34" Width="108" FontSize="20"/>
                     <Label Content="Nível de Acesso:" HorizontalAlignment="Left" Margin="26,328,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Image HorizontalAlignment="Left" Height="178" Margin="390,24,0,0" VerticalAlignment="Top" Width="178" Source="Imagens/icon-account.png">
                         <Image.OpacityMask>
@@ -38,12 +38,43 @@
             </TabItem>
             <TabItem Header="Editar Usuário">
                 <Grid Background="#FFE5E5E5">
+                    <Label Content="Login:" HorizontalAlignment="Left" Margin="26,147,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbEDIdUsuario" HorizontalAlignment="Left" Height="40" Margin="98,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <TextBox x:Name="txbEDSenha" HorizontalAlignment="Left" Height="40" Margin="98,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label x:Name="Senha_Copy" Content="Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="40" FontSize="20" Margin="26,241,0,0"/>
+                    <TextBox x:Name="txbConfirmarSenha_Copy" HorizontalAlignment="Left" Height="40" Margin="430,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label Content="Confirmar Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="186" Height="40" FontSize="20" Margin="264,241,0,0"/>
+                    <Image HorizontalAlignment="Left" Height="178" Margin="390,24,0,0" VerticalAlignment="Top" Width="178" Source="Imagens/icon-account.png">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Imagens/icon-account.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                    <Button x:Name="btnPesquisarUsuario" HorizontalAlignment="Left" Margin="264,147,0,0" VerticalAlignment="Top" Width="75" Click="btnPesquisarUsuario_Click" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="40" Source="/SistemaEvolution;component/Icone Buscar.png" Stretch="Fill" Width="58"/>
+                    </Button>
+                    <Button x:Name="btnExcluirUsuario" HorizontalAlignment="Left" Margin="572,462,0,0" VerticalAlignment="Top" Width="76" Click="btnExcluirUsuario_Click" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="60" Source="/SistemaEvolution;component/Icone botao adicionar pessoa.png" Stretch="Fill" Width="60"/>
+                    </Button>
+                    <Button x:Name="btnEditarUsuario" HorizontalAlignment="Left" Margin="462,462,0,0" VerticalAlignment="Top" Width="74" Click="btnEditarUsuario_Click" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="60" Source="/SistemaEvolution;component/Icone Editar usuario.png" Stretch="Fill" Width="60"/>
+                    </Button>
+                    <Label Content="Excluir" HorizontalAlignment="Left" Margin="582,524,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+                    <Label Content="Editar" HorizontalAlignment="Left" Margin="474,524,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
 
 
                 </Grid>
             </TabItem>
         </TabControl>
-        
+
 
     </Grid>
 </Window>

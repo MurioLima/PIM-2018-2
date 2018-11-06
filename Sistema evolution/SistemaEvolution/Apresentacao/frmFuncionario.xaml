@@ -91,6 +91,9 @@
                     <Label x:Name="lblEmailContato_Copy" Content="Email:" HorizontalAlignment="Left" Margin="660,120,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label Content="Editar" HorizontalAlignment="Left" Margin="992,535,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
                     <Label Content="Excluir" HorizontalAlignment="Left" Margin="1096,535,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+                    <RadioButton x:Name="rdbEDStatusFuncionarioAtivo" Content="Ativo" HorizontalAlignment="Left" Margin="1049,342,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <RadioButton x:Name="rdbEDStatusFuncionarioInativo" Content="Inativo" HorizontalAlignment="Left" Margin="1135,342,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Label Content="Status Funcionário:" HorizontalAlignment="Left" Margin="866,336,0,0" VerticalAlignment="Top" FontSize="20"/>
 
                 </Grid>
             </TabItem>

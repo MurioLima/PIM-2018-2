@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="frmSelecaoFuncionario" Height="627.973" Width="1264.603">
     <Grid>
-        <DataGrid x:Name="dtgSelecaoFuncionario" HorizontalAlignment="Left" Height="464" Margin="10,19,0,0" VerticalAlignment="Top" Width="1237" Background="{x:Null}" SelectionChanged="dtgSelecaoFuncionario_SelectionChanged"/>
+        <DataGrid x:Name="dtgSelecaoFuncionario" HorizontalAlignment="Left" Height="464" Margin="10,19,0,0" VerticalAlignment="Top" Width="1237" Background="LightGray" SelectionChanged="dtgSelecaoFuncionario_SelectionChanged" RowBackground="LightYellow"
+            AlternatingRowBackground="LightBlue" TextOptions.TextHintingMode="Fixed" IsReadOnly="True"/>
         <Button Content="Confirmar" HorizontalAlignment="Left" Margin="960,515,0,0" VerticalAlignment="Top" Width="141" Height="34" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
