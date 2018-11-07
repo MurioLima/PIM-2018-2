@@ -10,18 +10,27 @@
         <TabControl HorizontalAlignment="Left" Height="597" Margin="-3,0,0,0" VerticalAlignment="Top" Width="1265">
             <TabItem x:Name="tbcVisualizarChamados" Header="Visualizar Chamados">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox x:Name="txbCodChamado" HorizontalAlignment="Left" Height="40" Margin="230,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="5"/>
-                    <Label Content="Descrição do Chamado:" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="216" Height="40" FontSize="20"/>
-                    <TextBox x:Name="txbDescriçaoChamado" HorizontalAlignment="Left" Height="188" Margin="247,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="20" MaxLines="8" MaxLength="500"/>
-                    <Button x:Name="btnCadastrarChamado" Content="Enviar Resposta" HorizontalAlignment="Left" Margin="1014,480,0,0" VerticalAlignment="Top" Width="174" Height="28"/>
-                    <Label Content="Data do Chamado:" HorizontalAlignment="Left" Margin="247,433,0,0" VerticalAlignment="Top" Width="170" Height="40" FontSize="17"/>
+                    <TextBox x:Name="txbCodigoChamado" HorizontalAlignment="Left" Height="40" Margin="230,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <Label Content="Descrição do chamado do cliente:" HorizontalAlignment="Left" Margin="452,33,0,0" VerticalAlignment="Top" Width="310" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbDescriçaoChamadoCliente" HorizontalAlignment="Left" Height="202" Margin="452,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="781" FontSize="20" MaxLines="8" MaxLength="500"/>
+                    <Label Content="Data do Chamado:" HorizontalAlignment="Left" Margin="1063,39,0,0" VerticalAlignment="Top" Width="170" Height="40" FontSize="17"/>
                     <Label Content="Visualizar Chamados" HorizontalAlignment="Left" Height="46" Margin="20,16,0,0" VerticalAlignment="Top" Width="282" FontSize="30"/>
                     <Label Content="Código do Chamado:" HorizontalAlignment="Left" Margin="26,144,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20"/>
-                    <Image HorizontalAlignment="Left" Height="173" Margin="617,44,0,0" VerticalAlignment="Top" Width="173" Source="Imagens/software-clipart-broken-computer-770972-3364939.png">
+                    <Image HorizontalAlignment="Left" Height="173" Margin="26,189,0,0" VerticalAlignment="Top" Width="173" Source="Imagens/software-clipart-broken-computer-770972-3364939.png" RenderTransformOrigin="2.405,0.214">
                         <Image.OpacityMask>
                             <ImageBrush ImageSource="Imagens/software-clipart-broken-computer-770972-3364939.png"/>
                         </Image.OpacityMask>
                     </Image>
+                    <TextBox x:Name="txbCodigoAtendimento" HorizontalAlignment="Left" Height="40" Margin="254,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+                    <Label Content="Código do Atendimento:" HorizontalAlignment="Left" Margin="20,374,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBox x:Name="txbDescricaoChamadoFuncionario" HorizontalAlignment="Left" Height="122" Margin="452,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="781"/>
+                    <Label Content="Prioridade:" HorizontalAlignment="Left" Margin="26,447,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Label Content="Descrição do chamado do funcionário:" HorizontalAlignment="Left" Margin="452,320,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <RadioButton Content="0-Urgente" HorizontalAlignment="Left" Margin="137,446,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <RadioButton Content="2-Semi-Urgente" HorizontalAlignment="Left" Margin="136,499,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <RadioButton Content="1-Pouco Urgente" HorizontalAlignment="Left" Margin="137,473,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <RadioButton Content="3-Não Urgente" HorizontalAlignment="Left" Margin="136,526,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <Button x:Name="btnBuscarChamados" Content="Buscar Chamado" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top" Width="170" FontSize="20"/>
                 </Grid>
             </TabItem>
 
