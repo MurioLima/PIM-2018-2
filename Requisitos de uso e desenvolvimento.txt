@@ -1,0 +1,11 @@
+Requisitos para o uso do sistema web:
+	-Navegador (todos funcionam)
+	-Servidor local
+	-Banco de Dados local
+	-Software Desktop
+Ferramentas para criação da pagina desk:
+	-Microsoft Visual Studio(2017)
+	-Microsoft SQL
+	
+	
+	
