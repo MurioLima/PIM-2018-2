@@ -194,3 +194,4 @@ C:\Users\PC Gamer\Desktop\PIM-2018-2\Sistema evolution\SistemaEvolution\obj\Debu
 C:\Users\PC Gamer\Desktop\PIM-2018-2\Sistema evolution\SistemaEvolution\obj\Debug\SistemaEvolution.g.resources
 C:\Users\PC Gamer\Desktop\PIM-2018-2\Sistema evolution\SistemaEvolution\obj\Debug\SistemaEvolution.Properties.Resources.resources
 C:\Users\PC Gamer\Desktop\PIM-2018-2\Sistema evolution\SistemaEvolution\obj\Debug\SistemaEvolution.csproj.GenerateResource.Cache
+C:\Users\PC Gamer\Desktop\PIM-2018-2\Sistema evolution\SistemaEvolution\obj\Debug\SistemaEvolution.csproj.CoreCompileInputs.cache

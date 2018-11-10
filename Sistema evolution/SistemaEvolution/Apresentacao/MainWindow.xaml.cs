@@ -33,13 +33,16 @@ namespace SistemaEvolution
             string Senha;
             ID_Usuario = txbLogin.Text;
             Senha = txbSenha.Text;
-            if (!login.Logon(ID_Usuario, Senha))
+            if (login.Logon(ID_Usuario, Senha) == true)
             {
-                MessageBox.Show("Login ou senha Incorretos");
+                Apresentacao.frmPaginaPrincipal frmC = new Apresentacao.frmPaginaPrincipal();
+                frmC.ShowDialog();
+            }
+            if (login.Logon(ID_Usuario, Senha) == false)
+            {
+                MessageBox.Show("Login ou Senha incorretos");
             }
 
-            Apresentacao.frmPaginaPrincipal frmC = new Apresentacao.frmPaginaPrincipal();
-            frmC.ShowDialog();
         }
     }
 }

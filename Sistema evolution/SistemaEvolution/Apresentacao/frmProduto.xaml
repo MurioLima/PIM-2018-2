@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
         mc:Ignorable="d"
-        Title="frmProduto" Height="627.973" Width="1264.603">
+        Title="frmProduto" Height="627.973" Width="1264.603" WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="1265">
             <TabItem x:Name="tbcCadastrarProduto" Header="Cadastrar Produto">

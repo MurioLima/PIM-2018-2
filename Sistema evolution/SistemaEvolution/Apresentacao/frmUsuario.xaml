@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
         mc:Ignorable="d"
-        Title="frmUsuario" Height="627.973" Width="700">
+        Title="frmUsuario" Height="627.973" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,11 +14,11 @@
             <TabItem Header="Cadastrar Usuário">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Login:" HorizontalAlignment="Left" Margin="26,147,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
-                    <TextBox x:Name="txbIdUsuario" HorizontalAlignment="Left" Height="40" Margin="98,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="5"/>
+                    <TextBox x:Name="txbIdUsuario" HorizontalAlignment="Left" Height="40" Margin="98,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="8"/>
                     <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="40" Margin="98,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="20" MaxLines="1" MaxLength="5"/>
                     <Label x:Name="Senha" Content="Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="40" FontSize="20" Margin="26,241,0,0"/>
                     <TextBox x:Name="txbConfirmarSenha" HorizontalAlignment="Left" Height="40" Margin="430,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="20" MaxLines="1" MaxLength="5"/>
-                    <Label Content="Confirmar Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="186" Height="40" FontSize="20" Margin="264,241,0,0"/>
+                    <Label Content="Confirmar Senha:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Height="40" FontSize="20" Margin="264,241,0,0"/>
                     <Button x:Name="btnCadastrarUsuario" HorizontalAlignment="Left" Margin="302,441,0,0" VerticalAlignment="Top" Width="62" Height="69" Background="{x:Null}" Click="btnCadastrarUsuario_Click">
                         <Button.BorderBrush>
                             <SolidColorBrush Color="#FF707070" Opacity="0"/>

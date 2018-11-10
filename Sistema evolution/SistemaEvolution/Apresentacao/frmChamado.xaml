@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
         mc:Ignorable="d"
-        Title="frmChamados" Height="627.973" Width="1264.603">
+        Title="frmChamados" Height="627.973" Width="1264.603" WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="597" Margin="-3,0,0,0" VerticalAlignment="Top" Width="1265">
             <TabItem x:Name="tbcVisualizarChamados" Header="Visualizar Chamados">
@@ -26,11 +26,12 @@
                     <TextBox x:Name="txbDescricaoChamadoFuncionario" HorizontalAlignment="Left" Height="122" Margin="452,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="781"/>
                     <Label Content="Prioridade:" HorizontalAlignment="Left" Margin="26,447,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label Content="Descrição do chamado do funcionário:" HorizontalAlignment="Left" Margin="452,320,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <RadioButton Content="0-Urgente" HorizontalAlignment="Left" Margin="137,446,0,0" VerticalAlignment="Top" FontSize="18"/>
-                    <RadioButton Content="2-Semi-Urgente" HorizontalAlignment="Left" Margin="136,499,0,0" VerticalAlignment="Top" FontSize="18"/>
-                    <RadioButton Content="1-Pouco Urgente" HorizontalAlignment="Left" Margin="137,473,0,0" VerticalAlignment="Top" FontSize="18"/>
-                    <RadioButton Content="3-Não Urgente" HorizontalAlignment="Left" Margin="136,526,0,0" VerticalAlignment="Top" FontSize="18"/>
-                    <Button x:Name="btnBuscarChamados" Content="Buscar Chamado" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top" Width="170" FontSize="20"/>
+                    <RadioButton x:Name="rdbUrgente" Content="0-Urgente" HorizontalAlignment="Left" Margin="137,446,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <RadioButton x:Name="rdbSemiUrgente" Content="2-Semi-Urgente" HorizontalAlignment="Left" Margin="136,499,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <RadioButton x:Name="rdbPoucoUrgente" Content="1-Pouco Urgente" HorizontalAlignment="Left" Margin="137,473,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <RadioButton x:Name="rdbNaoUrgente" Content="3-Não Urgente" HorizontalAlignment="Left" Margin="136,526,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <Button x:Name="btnBuscarChamados" Content="Buscar Chamado" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top" Width="170" FontSize="20" Click="btnBuscarChamados_Click"/>
+                    <Button x:Name="btnCadastrarAtendimento" Content="Cadastrar Atendimento" HorizontalAlignment="Left" Margin="321,499,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click" Height="50"/>
                 </Grid>
             </TabItem>
 

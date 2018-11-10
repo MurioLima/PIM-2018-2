@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
         mc:Ignorable="d"
-        Title="frmSelecao" Height="627.973" Width="1264.603">
+        Title="frmSelecao" Height="627.973" Width="1264.603" WindowStartupLocation="CenterScreen">
     <Grid>
         <DataGrid x:Name="dtgSelecao" HorizontalAlignment="Left" Height="464" Margin="10,19,0,0" VerticalAlignment="Top" Width="1237" Background="LightGray" SelectionChanged="dtgSelecao_SelectionChanged" RowBackground="LightYellow"
             AlternatingRowBackground="LightBlue" TextOptions.TextHintingMode="Fixed" IsReadOnly="True"/>

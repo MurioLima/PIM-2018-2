@@ -125,6 +125,8 @@
     <Compile Include="Apresentacao\frmUsuario.xaml.cs">
       <DependentUpon>frmUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\AtendimentoDAO.cs" />
+    <Compile Include="DAL\ChamadoDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\FuncionarioDAO.cs" />
@@ -198,7 +200,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EvolutionEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Modelo\EvolutionEntity.edmx.diagram">
       <DependentUpon>EvolutionEntity.edmx</DependentUpon>
     </None>

@@ -62,12 +62,12 @@ namespace SistemaEvolution.Modelo
             if (ListaProduto[0] == "")
                 this.mensagem = "Código do produto está vazio \n";
             if (ListaProduto[0].Length > 5)
-                this.mensagem = "Codigo do produto com mais de 5 caracteres \n";
+                this.mensagem = "Código do produto com mais de 5 caracteres \n";
             if (ListaProduto[1].Length > 100)
                 this.mensagem = "Descriçao com mais de 100 caracteres \n";
 
             if (ListaProduto[2].Length > 5)
-                this.mensagem = "Codigo do cliente com mais de 5 caracteres";
+                this.mensagem = "Código do cliente com mais de 5 caracteres";
             try
             {
                 this.Cod_Produto = (ListaProduto[0]);
@@ -86,7 +86,7 @@ namespace SistemaEvolution.Modelo
             if (ListaFuncionario[0] =="")
                 this.mensagem = "Código do funcionário está vazio \n";
             if (ListaFuncionario[0].Length>5)
-                this.mensagem= "Codigo com mais de 5 caracteres \n";
+                this.mensagem= "Código com mais de 5 caracteres \n";
             if (ListaFuncionario[1] =="")
                 this.mensagem = "Nome do funcionário está vazio \n";
             if (ListaFuncionario[1].Length > 50)
@@ -114,8 +114,8 @@ namespace SistemaEvolution.Modelo
         public void ValidarDadosUsuario(List<String> ListaUsuario)
         {
             this.mensagem = "";
-            if(ListaUsuario[0].Length>5)
-                this.mensagem = "Codigo com mais de 5 caracteres \n";
+            if(ListaUsuario[0].Length>20)
+                this.mensagem = "Código com mais de 5 caracteres \n";
             try
             {
                 this.ID_usuario = (ListaUsuario[0]);
@@ -124,8 +124,42 @@ namespace SistemaEvolution.Modelo
             {
                 this.mensagem += "ID inválido";
             }
-
-
         }
+
+        public void ValidarDadosChamados(List<String> ListaChamados)
+        {
+            this.mensagem = "";
+            if (ListaChamados[0].Length > 8)
+                this.mensagem = "Código com mais de 8 caracteres \n";
+            try
+            {
+                this.Cod_Produto = (ListaChamados[0]);
+            }
+            catch (FormatException e)
+            {
+                this.mensagem += "ID inválido";
+            }
+        }
+
+        public void ValidarDadosAtendimento(List<String> ListaTipoAtendimento)
+        {
+            this.mensagem = "";
+            if (ListaTipoAtendimento[0].Length > 8)
+                this.mensagem = "Código com mais de 5 caracteres \n";
+            if (ListaTipoAtendimento[0]=="")
+                this.mensagem = "Código está vazio \n";
+            if (ListaTipoAtendimento[2]=="")
+                this.mensagem = "Escolha uma prioridade \n";
+            try
+            {
+                this.Cod_Produto = (ListaTipoAtendimento[0]);
+            }
+            catch (FormatException e)
+            {
+                this.mensagem += "ID inválido";
+            }
+        }
+
     }
+    
 }

@@ -467,6 +467,49 @@ namespace SistemaEvolution.Modelo
 
 
 
+        public void CadastrarTipoAtendimento(List<String> ListaTipoAtendimento)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosAtendimento(ListaTipoAtendimento);
+            if (validacao.mensagem.Equals(""))
+            {
+                TipoAtendimento tipoAtendimento = new TipoAtendimento();
+                tipoAtendimento.Cod_Atendimento = ListaTipoAtendimento[0];
+                tipoAtendimento.Descricao = ListaTipoAtendimento[1];
+                tipoAtendimento.Prioridade = ListaTipoAtendimento[2];
+
+                DAL.AtendimentoDAO atendimentoDAO = new DAL.AtendimentoDAO();
+                atendimentoDAO.CadastrarTipoAtendimento(tipoAtendimento);
+                this.mensagem = atendimentoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+        public void PesquisarChamados(List<String> ListaChamados)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosChamados(ListaChamados);
+            if (validacao.mensagem.Equals(""))
+            {
+                DAL.ChamadoDAO ChamadosDAO = new DAL.ChamadoDAO();
+                Chamados chamados = new Chamados();
+                chamados.Cod_Chamado = ListaChamados[0];
+                chamados.Desc_Chamado = ListaChamados[1];   
+                atbEstaticos.listaChamadosEstatico = ChamadosDAO.PesquisarChamados(chamados);
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+
+
 
     }
     

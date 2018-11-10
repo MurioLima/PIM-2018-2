@@ -18,5 +18,7 @@ namespace SistemaEvolution.Modelo
 
         public static List<Usuario> listaUsuarioEstatico;
 
+        public static List<Chamados> listaChamadosEstatico;
+
     }
 }
