@@ -33,7 +33,7 @@ namespace SistemaEvolution
             string Senha;
             ID_Usuario = txbLogin.Text;
             Senha = txbSenha.Text;
-<<<<<<< HEAD
+
             if (login.Logon(ID_Usuario, Senha) == true)
             {
                 Apresentacao.frmPaginaPrincipal frmC = new Apresentacao.frmPaginaPrincipal();
@@ -44,7 +44,6 @@ namespace SistemaEvolution
                 MessageBox.Show("Login ou Senha incorretos");
             }
 
-=======
             if (login.Logon(ID_Usuario, Senha) == true) 
             {
                 Apresentacao.frmPaginaPrincipal frmC = new Apresentacao.frmPaginaPrincipal();
@@ -55,7 +54,7 @@ namespace SistemaEvolution
                 MessageBox.Show ("Login ou Senha incorretos");
             }  
             
->>>>>>> eb4fcb6a5c9a64f036add94f9c4c9972a5caaf08
+
         }
     }
 }

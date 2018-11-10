@@ -252,6 +252,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Online-Customer-Support-Icon.png" />
     <Resource Include="Sem Título-1.png" />
     <Resource Include="icone salvar produto.png" />
     <Resource Include="excluir produto.png" />
@@ -263,6 +264,7 @@
     <Resource Include="Icone botao salvar produto.png" />
     <Resource Include="Icone Editar usuario.png" />
     <Resource Include="Icone botao adicionar pessoa.png" />
+    <Resource Include="botaoatendimento.png" />
     <Content Include="Modelo\EvolutionEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EvolutionEntity.edmx</DependentUpon>

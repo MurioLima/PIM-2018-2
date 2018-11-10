@@ -23,15 +23,26 @@
                     </Image>
                     <TextBox x:Name="txbCodigoAtendimento" HorizontalAlignment="Left" Height="40" Margin="254,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
                     <Label Content="Código do Atendimento:" HorizontalAlignment="Left" Margin="20,374,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <TextBox x:Name="txbDescricaoChamadoFuncionario" HorizontalAlignment="Left" Height="122" Margin="452,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="781"/>
-                    <Label Content="Prioridade:" HorizontalAlignment="Left" Margin="26,447,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBox x:Name="txbDescricaoChamadoFuncionario" HorizontalAlignment="Left" Height="122" Margin="452,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="781" FontSize="20"/>
+                    <Label Content="Prioridade:" HorizontalAlignment="Left" Margin="22,447,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label Content="Descrição do chamado do funcionário:" HorizontalAlignment="Left" Margin="452,320,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <RadioButton x:Name="rdbUrgente" Content="0-Urgente" HorizontalAlignment="Left" Margin="137,446,0,0" VerticalAlignment="Top" FontSize="18"/>
                     <RadioButton x:Name="rdbSemiUrgente" Content="2-Semi-Urgente" HorizontalAlignment="Left" Margin="136,499,0,0" VerticalAlignment="Top" FontSize="18"/>
                     <RadioButton x:Name="rdbPoucoUrgente" Content="1-Pouco Urgente" HorizontalAlignment="Left" Margin="137,473,0,0" VerticalAlignment="Top" FontSize="18"/>
                     <RadioButton x:Name="rdbNaoUrgente" Content="3-Não Urgente" HorizontalAlignment="Left" Margin="136,526,0,0" VerticalAlignment="Top" FontSize="18"/>
-                    <Button x:Name="btnBuscarChamados" Content="Buscar Chamado" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top" Width="170" FontSize="20" Click="btnBuscarChamados_Click"/>
-                    <Button x:Name="btnCadastrarAtendimento" Content="Cadastrar Atendimento" HorizontalAlignment="Left" Margin="321,499,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click" Height="50"/>
+                    <Button x:Name="btnBuscarChamados" HorizontalAlignment="Left" Margin="354,142,0,0" VerticalAlignment="Top" Width="59" FontSize="20" Click="btnBuscarChamados_Click" Height="46" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="40" Source="/SistemaEvolution;component/Icone Buscar.png" Stretch="Fill" Width="58"/>
+                    </Button>
+                    <Button x:Name="btnCadastrarAtendimento" HorizontalAlignment="Left" Margin="1103,489,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click" Height="60" Background="{x:Null}">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                        </Button.BorderBrush>
+                        <Image Height="59" Source="/SistemaEvolution;component/Online-Customer-Support-Icon.png" Stretch="Fill" Width="59"/>
+                    </Button>
+                    <Label Content="Cadastrar Atend." HorizontalAlignment="Left" Margin="1075,545,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
                 </Grid>
             </TabItem>
 
