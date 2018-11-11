@@ -101,6 +101,7 @@ namespace SistemaEvolution.Modelo
                 this.mensagem = "Telefone com mais de 11 caracteres \n";
             if (ListaFuncionario[6].Length > 50)
                 this.mensagem = "E-mail com mais de 50 caracteres \n";
+
             try
             {
                 this.Cod_Funcionario = (ListaFuncionario[0]);

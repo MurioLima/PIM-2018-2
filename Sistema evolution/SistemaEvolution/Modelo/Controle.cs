@@ -255,7 +255,7 @@ namespace SistemaEvolution.Modelo
                 funcionario.Telefone = ListaFuncionario[5];
                 funcionario.Email_Contato = ListaFuncionario[6];
                 funcionario.Stat_Funcionario = ListaFuncionario[7];
-                funcionario.ID_usuario = ListaFuncionario[8];
+                funcionario.ID_usuario=ListaFuncionario[8];
                 DAL.FuncionarioDAO funcionarioDAO = new DAL.FuncionarioDAO();
                 funcionarioDAO.EditarFuncionario(funcionario);
                 this.mensagem = funcionarioDAO.mensagem;
