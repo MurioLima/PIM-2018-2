@@ -40,6 +40,7 @@ namespace SistemaEvolution.Apresentacao
             if (rdbStatusFuncionarioAtivo.IsChecked == true) stat_Funcionario = "A";
             if (rdbStatusFuncionarioInativo.IsChecked == true) stat_Funcionario = "I";
             ListaFuncionario.Add(stat_Funcionario);
+            ListaFuncionario.Add(txbIdUsuario.Text);
 
             Modelo.Controle controle = new Modelo.Controle();
             controle.CadastrarFuncionario(ListaFuncionario);
@@ -55,7 +56,9 @@ namespace SistemaEvolution.Apresentacao
             ListaFuncionario.Add("");
             ListaFuncionario.Add("");
             ListaFuncionario.Add("");
-            ListaFuncionario.Add("");           
+            ListaFuncionario.Add("");
+            ListaFuncionario.Add("");
+
             Modelo.Controle controle = new Modelo.Controle();
             controle.PesquisarFuncionarioPorNome(ListaFuncionario);
             Modelo.Funcionario funcionario = new Modelo.Funcionario();
@@ -79,6 +82,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEndereco.Text = funcionario.End_Completo;
                 txbEDTelefone.Text = funcionario.Telefone;
                 txbEDEmailContato.Text = funcionario.Email_Contato;
+                txbEdIdUsuario.Text = funcionario.ID_usuario;
             }
             else
             if (Modelo.atbEstaticos.listaFuncionarioEstatico.Count >= 2)
@@ -159,6 +163,7 @@ namespace SistemaEvolution.Apresentacao
             if (rdbEDStatusFuncionarioAtivo.IsChecked == true) stat_Funcionario = "A";
             if (rdbEDStatusFuncionarioInativo.IsChecked == true) stat_Funcionario = "I";
             ListaFuncionario.Add(stat_Funcionario);
+            ListaFuncionario.Add(txbEdIdUsuario.Text);
             Modelo.Controle controle = new Modelo.Controle();
             controle.EditarFuncionario(ListaFuncionario);
             MessageBox.Show(controle.mensagem);

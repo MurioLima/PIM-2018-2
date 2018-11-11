@@ -27,14 +27,14 @@
                     <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="40" Margin="184,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" FontSize="20" MaxLines="1" MaxLength="30"/>
                     <Label Content="Razão Social:" HorizontalAlignment="Left" Margin="26,252,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbRazaoSocial" HorizontalAlignment="Left" Height="40" Margin="162,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="20" MaxLength="50" MaxLines="1"/>
-                    <Label Content="E-mail:" HorizontalAlignment="Left" Margin="564,92,0,0" VerticalAlignment="Top" Width="394" Height="40" FontSize="20"/>
-                    <TextBox x:Name="txbEmail_Contato" HorizontalAlignment="Left" Height="40" Margin="646,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="582" FontSize="20" MaxLength="30" MaxLines="1"/>
+                    <Label Content="E-mail:" HorizontalAlignment="Left" Margin="564,252,0,0" VerticalAlignment="Top" Width="394" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbEmail_Contato" HorizontalAlignment="Left" Height="40" Margin="645,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="582" FontSize="20" MaxLength="30" MaxLines="1"/>
                     <Label Content="CPF:" HorizontalAlignment="Left" Margin="26,408,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbCpf" HorizontalAlignment="Left" Height="40" Margin="85,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="20" MaxLength="11" MaxLines="1"/>
                     <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="426,408,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbCnpj" HorizontalAlignment="Left" Height="40" Margin="494,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontSize="20" MaxLength="12" MaxLines="1"/>
-                    <Label Content="Telefone:" HorizontalAlignment="Left" Margin="564,252,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="20"/>
-                    <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="40" Margin="664,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1"/>
+                    <Label Content="Telefone:" HorizontalAlignment="Left" Margin="798,93,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="20"/>
+                    <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="40" Margin="893,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1"/>
                     <Label Content="Endereço Completo:" HorizontalAlignment="Left" Margin="26,330,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20"/>
                     <TextBox x:Name="txbEndereço" HorizontalAlignment="Left" Height="40" Margin="228,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
                     <Button x:Name="btnCadastrarUsuario" HorizontalAlignment="Left" Margin="1108,460,0,0" VerticalAlignment="Top" Width="78" Height="86" Click="btnCadastrarUsuario_Click" Background="{x:Null}">
@@ -57,6 +57,8 @@
                     <RadioButton x:Name="rdbStatusClienteInativo" Content=" Inativo" HorizontalAlignment="Left" Margin="1044,414,0,0" VerticalAlignment="Top" Height="32" Width="92" FontSize="20" Checked="rdbStatusClienteInativo_Checked"/>
                     <Label Content="Status Cliente:" HorizontalAlignment="Left" Margin="824,408,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label Content="Cadastrar" HorizontalAlignment="Left" Margin="1110,532,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+                    <TextBox x:Name="txbIdUsuario" HorizontalAlignment="Left" Height="40" Margin="530,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLines="1" MaxLength="8"/>
+                    <Label Content="Código Usuário :" HorizontalAlignment="Left" Margin="363,92,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20"/>
 
 
 
@@ -82,14 +84,14 @@
                     <TextBox x:Name="txbEDNome" HorizontalAlignment="Left" Height="40" Margin="117.5,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" FontSize="20" MaxLines="1" MaxLength="50" Grid.Column="1"/>
                     <Label Content="Razão Social:" HorizontalAlignment="Left" Margin="26,252,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" Grid.ColumnSpan="2"/>
                     <TextBox x:Name="txbEDRazaoSocial" HorizontalAlignment="Left" Height="40" Margin="95.5,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" FontSize="20" MaxLength="30" MaxLines="1" Grid.Column="1"/>
-                    <Label Content="E-mail:" HorizontalAlignment="Left" Margin="497.5,92,0,0" VerticalAlignment="Top" Width="393" Height="40" FontSize="20" Grid.Column="1"/>
-                    <TextBox x:Name="txbEDEmail_Contato" HorizontalAlignment="Left" Height="40" Margin="579.5,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="581" FontSize="20" MaxLength="30" MaxLines="1" Grid.Column="1"/>
+                    <Label Content="E-mail:" HorizontalAlignment="Left" Margin="498,252,0,0" VerticalAlignment="Top" Width="393" Height="40" FontSize="20" Grid.Column="1"/>
+                    <TextBox x:Name="txbEDEmail_Contato" HorizontalAlignment="Left" Height="40" Margin="579,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="582" FontSize="20" MaxLength="30" MaxLines="1" Grid.Column="1"/>
                     <Label Content="CPF:" HorizontalAlignment="Left" Margin="26,408,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2"/>
                     <TextBox x:Name="txbEDCpf" HorizontalAlignment="Left" Height="40" Margin="18.5,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="20" MaxLength="11" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1"/>
                     <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="361,408,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20" Grid.Column="1"/>
                     <TextBox x:Name="txbEDCnpj" HorizontalAlignment="Left" Height="40" Margin="429,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontSize="20" MaxLength="12" MaxLines="1" Grid.Column="1"/>
-                    <Label Content="Telefone:" HorizontalAlignment="Left" Margin="497.5,252,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Grid.Column="1"/>
-                    <TextBox x:Name="txbEDTelefone" HorizontalAlignment="Left" Height="40" Margin="597.5,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1" Grid.Column="1"/>
+                    <Label Content="Telefone:" HorizontalAlignment="Left" Margin="729,92,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Grid.Column="1"/>
+                    <TextBox x:Name="txbEDTelefone" HorizontalAlignment="Left" Height="40" Margin="827,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="20" MaxLength="11" MaxLines="1" Grid.Column="1"/>
                     <Label Content="Endereço Completo:" HorizontalAlignment="Left" Margin="26,330,0,0" VerticalAlignment="Top" Width="184" Height="40" FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2"/>
                     <TextBox x:Name="txbEDEndereco"  HorizontalAlignment="Left" Height="40" Margin="161.5,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="999" FontSize="20" MaxLength="50" MaxLines="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1"/>
 
@@ -117,6 +119,8 @@
                     </Button>
                     <Label Content="Editar" Grid.Column="1" HorizontalAlignment="Left" Margin="934,533,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
                     <Label Content="Excluir" Grid.Column="1" HorizontalAlignment="Left" Margin="1039,533,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+                    <TextBox x:Name="txbEdIdUsuario" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="459,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="20" MaxLength="8" MaxLines="1"/>
+                    <Label Content="Código Usuário :" HorizontalAlignment="Left" Margin="292,92,0,0" VerticalAlignment="Top" Width="185" Height="40" FontSize="20" Grid.Column="1"/>
 
 
                 </Grid>

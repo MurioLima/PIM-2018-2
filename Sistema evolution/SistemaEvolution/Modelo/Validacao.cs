@@ -24,9 +24,9 @@ namespace SistemaEvolution.Modelo
         {
             this.mensagem = "";
             if (ListaCliente[0] == "")
-                this.mensagem = "Codigo do cliente está vazio \n";
+                this.mensagem = "Código do cliente está vazio \n";
             if (ListaCliente[0].Length > 5)
-                this.mensagem = "Codigo com mais de 5 caracteres \n";
+                this.mensagem = "Código com mais de 5 caracteres \n";
             if (ListaCliente[1].Length > 50)
                 this.mensagem = "Nome com mais de 30 caracteres \n";
             if (ListaCliente[1] == "")

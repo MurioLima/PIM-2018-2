@@ -10,7 +10,6 @@ namespace SistemaEvolution.Modelo
     public class Controle
     {
 
-
         //Crud cliente ↓
 
         //Código do Cadastrar cliente ↓
@@ -31,7 +30,8 @@ namespace SistemaEvolution.Modelo
                 cliente.Email_Contato = ListaCliente[5];
                 cliente.End_Completo = ListaCliente[6];
                 cliente.Telefone = ListaCliente[7];
-                cliente.Stat_Cliente = ListaCliente[8]; 
+                cliente.Stat_Cliente = ListaCliente[8];
+                cliente.ID_usuario = ListaCliente[9];
                 DAL.ClienteDAO ClienteDAO = new DAL.ClienteDAO();
                 ClienteDAO.CadastrarCliente(cliente);
                 this.mensagem = ClienteDAO.mensagem;
@@ -126,6 +126,7 @@ namespace SistemaEvolution.Modelo
                 cliente.End_Completo = ListaCliente[6];
                 cliente.Telefone = ListaCliente[7];
                 cliente.Stat_Cliente = ListaCliente[8];
+                cliente.ID_usuario = ListaCliente[9];
                 DAL.ClienteDAO clienteDAO = new DAL.ClienteDAO();
                 clienteDAO.EditarCliente(cliente);
                 this.mensagem = clienteDAO.mensagem;
@@ -156,6 +157,7 @@ namespace SistemaEvolution.Modelo
                 funcionario.Telefone = ListaFuncionario[5];
                 funcionario.Email_Contato = ListaFuncionario[6];
                 funcionario.Stat_Funcionario = ListaFuncionario[7];
+                funcionario.ID_usuario = ListaFuncionario[8];
                 DAL.FuncionarioDAO FuncionarioDAO = new DAL.FuncionarioDAO();
                 FuncionarioDAO.CadastrarFuncionario(funcionario);
                 this.mensagem = FuncionarioDAO.mensagem;
@@ -253,6 +255,7 @@ namespace SistemaEvolution.Modelo
                 funcionario.Telefone = ListaFuncionario[5];
                 funcionario.Email_Contato = ListaFuncionario[6];
                 funcionario.Stat_Funcionario = ListaFuncionario[7];
+                funcionario.ID_usuario = ListaFuncionario[8];
                 DAL.FuncionarioDAO funcionarioDAO = new DAL.FuncionarioDAO();
                 funcionarioDAO.EditarFuncionario(funcionario);
                 this.mensagem = funcionarioDAO.mensagem;

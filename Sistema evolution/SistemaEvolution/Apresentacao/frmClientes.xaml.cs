@@ -47,6 +47,7 @@ namespace SistemaEvolution.Apresentacao
                 if (rdbStatusClienteAtivo.IsChecked == true) Stat_Cliente = "A";
                 if (rdbStatusClienteInativo.IsChecked == true) Stat_Cliente = "I";
             ListaCliente.Add(Stat_Cliente);
+            ListaCliente.Add(txbIdUsuario.Text);
             
 
             Modelo.EvolutionEntities status = new Modelo.EvolutionEntities();
@@ -81,6 +82,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEmail_Contato.Text = cliente.Email_Contato;
                 txbEDEndereco.Text = cliente.End_Completo;
                 txbEDTelefone.Text = cliente.Telefone;
+                txbEdIdUsuario.Text = cliente.ID_usuario;
             }
             else
             {
@@ -126,6 +128,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEmail_Contato.Text = cliente.Email_Contato;
                 txbEDEndereco.Text = cliente.End_Completo;
                 txbEDTelefone.Text = cliente.Telefone;
+                txbEdIdUsuario.Text = cliente.ID_usuario;
             }
             else
             if (Modelo.atbEstaticos.listaClienteEstatico.Count >= 2)
@@ -174,6 +177,7 @@ namespace SistemaEvolution.Apresentacao
             if (rdbEDStatusClienteAtivo.IsChecked == true) Stat_Cliente = "A";
             if (rdbEDStatusFuncionarioInativo.IsChecked == true) Stat_Cliente = "I";
             ListaCliente.Add(Stat_Cliente);
+            ListaCliente.Add(txbEdIdUsuario.Text);
             Modelo.Controle controle = new Modelo.Controle();
             controle.EditarCliente(ListaCliente);
             MessageBox.Show(controle.mensagem);
