@@ -143,6 +143,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEmail_Contato.Text = Modelo.atbEstaticos.listaClienteEstatico[0].Email_Contato.ToString();
                 txbEDEndereco.Text = Modelo.atbEstaticos.listaClienteEstatico[0].End_Completo.ToString();
                 txbEDTelefone.Text = Modelo.atbEstaticos.listaClienteEstatico[0].Telefone.ToString();
+                txbEdIdUsuario.Text = Modelo.atbEstaticos.listaClienteEstatico[0].ID_usuario.ToString();
             }
         }
 

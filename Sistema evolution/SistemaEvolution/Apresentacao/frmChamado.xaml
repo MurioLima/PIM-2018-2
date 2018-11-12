@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaEvolution.Apresentacao"
         mc:Ignorable="d"
-        Title="frmChamados" Height="627.973" Width="1264.603" WindowStartupLocation="CenterScreen">
+        Title="frmChamados" Height="627.973" Width="1264.603" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="597" Margin="-3,0,0,0" VerticalAlignment="Top" Width="1265">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="597" Margin="-3,0,-5,0" VerticalAlignment="Top" Width="1265">
             <TabItem x:Name="tbcVisualizarChamados" Header="Visualizar Chamados">
                 <Grid Background="#FFE5E5E5">
                     <TextBox x:Name="txbCodigoChamado" HorizontalAlignment="Left" Height="40" Margin="230,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="20" MaxLines="1" MaxLength="5"/>

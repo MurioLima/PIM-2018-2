@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaEvolution"
         mc:Ignorable="d"
-        Title="Login" Height="554.162" Width="395.636" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="554.162" Width="418.136" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Label x:Name="lblLogin" Content="Login:" HorizontalAlignment="Left" Margin="116,213,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="43" Width="68" FontSize="18"/>
+        <Label x:Name="lblLogin" Content="Email:" HorizontalAlignment="Left" Margin="113,213,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="43" Width="68" FontSize="18"/>
         <Label x:Name="lblSenha" Content="Senha:" HorizontalAlignment="Left" Margin="112,293,0,0" VerticalAlignment="Top" Height="39" Width="68" FontSize="17"/>
         <TextBox x:Name="txbLogin" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Margin="116,247,0,0" FontSize="20"/>
         <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="33" Margin="116,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontSize="20"/>
         <Button x:Name="btnLogar" HorizontalAlignment="Left" Margin="168,396,0,0" VerticalAlignment="Top" Width="62" Height="74" Click="btnLogar_Click" Background="{x:Null}">
+
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>

@@ -96,8 +96,7 @@ namespace SistemaEvolution.Apresentacao
                 txbEDEndereco.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].End_Completo.ToString();
                 txbEDTelefone.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Telefone.ToString();
                 txbEDEmailContato.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].Email_Contato.ToString();
-
-
+                txbEdIdUsuario.Text = Modelo.atbEstaticos.listaFuncionarioEstatico[0].ID_usuario.ToString();
             }
         }
 
