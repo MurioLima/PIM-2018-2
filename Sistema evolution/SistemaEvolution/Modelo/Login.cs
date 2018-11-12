@@ -9,11 +9,12 @@ namespace SistemaEvolution.Modelo
 {
      public class Login
     {
-        public bool Logon(String ID_Usuario, String Senha)
+        public bool Logon(String Email_Contato, String Senha)
         {
             var db = new EvolutionEntities();
-            var usuario = db.Usuario.FirstOrDefault(u => u.ID_usuario == ID_Usuario && u.Senha == Senha);
-            if (usuario != null)
+            var senha = db.Usuario.FirstOrDefault(u => u.Senha == Senha);
+            var email = db.Funcionario.FirstOrDefault(u => u.Email_Contato==Email_Contato);
+            if (senha != null && email != null)
             {
                 return true;
             }

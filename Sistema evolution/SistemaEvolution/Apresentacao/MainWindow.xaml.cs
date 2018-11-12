@@ -29,29 +29,22 @@ namespace SistemaEvolution
         private void btnLogar_Click(object sender, RoutedEventArgs e)
         {
             var login = new Modelo.Login();
-            string ID_Usuario;
+            string Email_Contato;
             string Senha;
-            ID_Usuario = txbLogin.Text;
+            Email_Contato = txbLogin.Text;
             Senha = txbSenha.Text;
 
-            if (login.Logon(ID_Usuario, Senha) == true)
+            if (login.Logon(Email_Contato, Senha) == true)
             {
                 Apresentacao.frmPaginaPrincipal frmC = new Apresentacao.frmPaginaPrincipal();
                 frmC.ShowDialog();
             }
-            if (login.Logon(ID_Usuario, Senha) == false)
+            if (login.Logon(Email_Contato, Senha) == false)
             {
                 MessageBox.Show("Login ou Senha incorretos");
             }
 
-            if (login.Logon(ID_Usuario, Senha) == true) 
-            {
-                Apresentacao.frmPaginaPrincipal frmC = new Apresentacao.frmPaginaPrincipal();
-                frmC.ShowDialog();
-            }
-            if (login.Logon(ID_Usuario, Senha) == false)
-            {
-                MessageBox.Show ("Login ou Senha incorretos");
+            
             }  
             
 
