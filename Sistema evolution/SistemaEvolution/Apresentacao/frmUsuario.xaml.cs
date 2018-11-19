@@ -14,9 +14,8 @@ using System.Windows.Shapes;
 
 namespace SistemaEvolution.Apresentacao
 {
-    /// <summary>
-    /// Interaction logic for frmUsuario.xaml
-    /// </summary>
+
+    //Código para iniciar o form↓
     public partial class frmUsuario : Window
     {
         public frmUsuario()
@@ -24,6 +23,7 @@ namespace SistemaEvolution.Apresentacao
             InitializeComponent();
         }
 
+        //Código do botao para chamar o cadastro usuario↓
         private void btnCadastrarUsuario_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaUsuario = new List<string>();
@@ -41,6 +41,7 @@ namespace SistemaEvolution.Apresentacao
             MessageBox.Show(controle.mensagem);
         }
 
+        //Código do botao para chamar o pesquisar usuario↓
         private void btnPesquisarUsuario_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaUsuario = new List<string>();
@@ -70,6 +71,8 @@ namespace SistemaEvolution.Apresentacao
             }
         }
 
+        //Código do botao para chamar o excluir usuario↓
+
         private void btnExcluirUsuario_Click(object sender, RoutedEventArgs e)
         {
             String[] dados = { txbEDIdUsuario.Text, txbEDSenha.Text};
@@ -85,6 +88,7 @@ namespace SistemaEvolution.Apresentacao
 
         }
 
+        //Código do botao para chamar o editar usuario↓
         private void btnEditarUsuario_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaUsuario = new List<string>();

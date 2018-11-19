@@ -9,6 +9,8 @@ namespace SistemaEvolution.Modelo
 {
      public class Login
     {
+
+        //Código do login do usuario↓
         public bool Logon(String Email_Contato, String Senha)
         {
             var db = new EvolutionEntities();

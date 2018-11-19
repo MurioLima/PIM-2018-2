@@ -14,9 +14,8 @@ using System.Windows.Shapes;
 
 namespace SistemaEvolution.Apresentacao
 {
-    /// <summary>
-    /// Lógica interna para frmSelecao.xaml
-    /// </summary>
+
+    //Código para inciar o form seleção↓
     public partial class frmSelecao : Window
     {
         public frmSelecao()
@@ -24,17 +23,20 @@ namespace SistemaEvolution.Apresentacao
             InitializeComponent();
             InicializarDTG();
         }
+
+        //Código para inciar form DTG↓
         public void InicializarDTG()
         {
             dtgSelecao.ItemsSource = Modelo.atbEstaticos.listaClienteEstatico;
         }
 
+        //Código do para fechar o form dtg↓
         private void btnConfirmarSelecao_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-
+        //Código para selecionar a lista↓
         private void dtgSelecao_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modelo.atbEstaticos.listaClienteEstatico.Clear();

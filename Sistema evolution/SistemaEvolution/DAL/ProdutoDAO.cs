@@ -9,9 +9,11 @@ namespace SistemaEvolution.DAL
 {
     public class ProdutoDAO
     {
+        //Declaraçao das variaveis↓
         EvolutionEntities Produto = new EvolutionEntities();
         public String mensagem;
 
+        //Código para cadastrar produto↓
         public void CadastrarProduto(Modelo.Produto produto)
         {
             this.mensagem = "";
@@ -48,6 +50,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Código para excluir produto↓
         public void ExcluirProduto(Modelo.Produto produto)
         {
             this.mensagem = "";
@@ -58,6 +61,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Código para editar produto↓
         public void EditarProduto(Modelo.Produto produto)
         { 
         

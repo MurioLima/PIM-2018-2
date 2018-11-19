@@ -14,9 +14,8 @@ using System.Windows.Shapes;
 
 namespace SistemaEvolution.Apresentacao
 {
-    /// <summary>
-    /// Interaction logic for frmProduto.xaml
-    /// </summary>
+
+    //Código para iniciar o form produto↓
     public partial class frmProduto : Window
     {
         public frmProduto()
@@ -25,7 +24,7 @@ namespace SistemaEvolution.Apresentacao
         }
 
 
-
+        //Código do botão para cadastrar produto↓
         private void btnCadastrarProduto_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaProduto = new List<string>();
@@ -38,11 +37,13 @@ namespace SistemaEvolution.Apresentacao
             MessageBox.Show(controle.mensagem);
         }
 
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
+        //Código do botão para buscar o produto↓
         private void btnBuscarProduto_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaProduto = new List<string>();
@@ -75,6 +76,7 @@ namespace SistemaEvolution.Apresentacao
             }
         }
 
+        //Código do botão para editar produto↓
         private void btnEditarProduto_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaProduto = new List<string>();
@@ -86,6 +88,7 @@ namespace SistemaEvolution.Apresentacao
             MessageBox.Show(controle.mensagem);
         }
 
+        //Código do botão para excluir produto↓
         private void btnExcluirProduto_Click(object sender, RoutedEventArgs e)
         {
             String[] dados = { txbEdCodProduto.Text,txbEdDescricaoProduto.Text,txbEDCodCliente.Text };

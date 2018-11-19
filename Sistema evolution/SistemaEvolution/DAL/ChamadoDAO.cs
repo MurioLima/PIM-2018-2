@@ -9,12 +9,14 @@ namespace SistemaEvolution.DAL
 {
     public class ChamadoDAO
     {
+        //Declaração da variavel↓
         EvolutionEntities Chamados = new EvolutionEntities();
         public String mensagem;
 
 
 
 
+        //Código para pesquisar chamados↓
         public List<Modelo.Chamados> PesquisarChamados(Modelo.Chamados chamados)
         {
             this.mensagem = "";

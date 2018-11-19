@@ -10,9 +10,11 @@ namespace SistemaEvolution.DAL
 {
     public class UsuarioDAO
     {
-        
+        //Declaraçao das variaveis↓
         EvolutionEntities Usuario = new EvolutionEntities();
         public String mensagem;
+
+        //Código para cadastrar o usuario↓
         public void CadastrarUsuario(Modelo.Usuario usuario)
 
         {
@@ -31,7 +33,8 @@ namespace SistemaEvolution.DAL
 
         }
 
-        //Codigo para Pesquisar o usuario pelo ID
+        
+        //Código para pesquisar o usuario pelo ID↓
         public List<Modelo.Usuario> PesquisarUsuario(Modelo.Usuario usuario)
         {
             this.mensagem = "";
@@ -48,6 +51,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Código para excluir o usuario↓
         public void ExcluirUsuario(Modelo.Usuario usuario)
         {
             this.mensagem = "";
@@ -58,6 +62,7 @@ namespace SistemaEvolution.DAL
 
         }
 
+        //Código para editar o usuario↓
         public void EditarUsuario(Modelo.Usuario usuario)
         {
 

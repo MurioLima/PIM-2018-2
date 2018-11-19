@@ -219,3 +219,5 @@ C:\Users\Matheus Pellisoli\Desktop\HelpDesk\HelpDesk\obj\Debug\HelpDesk.csproj.C
 C:\Users\Matheus Pellisoli\Desktop\HelpDesk\HelpDesk\obj\Debug\HelpDesk.csproj.CopyComplete
 C:\Users\Matheus Pellisoli\Desktop\HelpDesk\HelpDesk\obj\Debug\HelpDesk.dll
 C:\Users\Matheus Pellisoli\Desktop\HelpDesk\HelpDesk\obj\Debug\HelpDesk.pdb
+C:\Users\PC Gamer\Desktop\Nova pasta\PIM-2018-2\HelpDesk\HelpDesk\obj\Debug\HelpDesk.csprojResolveAssemblyReference.cache
+C:\Users\PC Gamer\Desktop\Nova pasta\PIM-2018-2\HelpDesk\HelpDesk\obj\Debug\HelpDesk.csproj.CoreCompileInputs.cache

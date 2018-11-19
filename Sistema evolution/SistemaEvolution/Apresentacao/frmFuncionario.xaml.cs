@@ -19,13 +19,14 @@ namespace SistemaEvolution.Apresentacao
     /// </summary>
     public partial class frmFuncionario : Window
     {
+        //Código para iniciar o form↓
         public frmFuncionario()
         {
             InitializeComponent();
         }
 
-       
 
+        //Código do botao para chamar o cadastro funcionario↓
         private void btnCadastrarFuncionario_Click_1(object sender, RoutedEventArgs e)
         {
             List<String> ListaFuncionario = new List<string>();
@@ -47,6 +48,7 @@ namespace SistemaEvolution.Apresentacao
             MessageBox.Show(controle.mensagem);
         }
 
+        //Código do botao para chamar o buscar pelo nome funcionario↓
         private void btnBuscarNome_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaFuncionario = new List<string>();
@@ -101,7 +103,7 @@ namespace SistemaEvolution.Apresentacao
         }
 
 
-
+        //Código do botao para chamar o buscar funcionario↓
         private void btnBuscarFuncionario_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaFuncionario = new List<string>();
@@ -132,6 +134,7 @@ namespace SistemaEvolution.Apresentacao
             }
         }
 
+        //Código do botao para chamar o excluir funcionario↓
         private void btnExcluirFuncionario_Click_1(object sender, RoutedEventArgs e)
         {
             String[] dados = { txbEDCodFuncionario.Text, txbEDNomeCompleto.Text, txbEDNomeTratamento.Text, txbEDCpf.Text, txbEDEndereco.Text, txbEDTelefone.Text, txbEDEmailContato.Text };
@@ -147,7 +150,7 @@ namespace SistemaEvolution.Apresentacao
 
         }
 
-
+        //Código do botao para chamar o editar funcionario↓
         private void btnEditarFuncionario_Click_1(object sender, RoutedEventArgs e)
         {
             List<String> ListaFuncionario = new List<string>();

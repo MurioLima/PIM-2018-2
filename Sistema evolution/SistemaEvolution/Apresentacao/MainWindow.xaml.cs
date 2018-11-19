@@ -21,11 +21,14 @@ namespace SistemaEvolution
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        //Código para iniciar o form↓
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        //Código do login do usuario↓
         private void btnLogar_Click(object sender, RoutedEventArgs e)
         {
             var login = new Modelo.Login();

@@ -9,8 +9,11 @@ namespace SistemaEvolution.DAL
 {
     public class AtendimentoDAO
     {
+        //Declaração da variavel↓
         EvolutionEntities TipoAtendimento = new EvolutionEntities();
         public String mensagem;
+
+        //Código do cadastro do atendimento↓
         public void CadastrarTipoAtendimento(Modelo.TipoAtendimento tipoAtendimento)
         {
             this.mensagem = "";

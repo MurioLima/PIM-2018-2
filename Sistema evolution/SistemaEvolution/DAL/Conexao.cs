@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 
 namespace SistemaEvolution.DAL
 {
+
+    //classe de conexão com banco↓
     class Conexao
     {
         SqlConnection conexaoBD;

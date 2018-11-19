@@ -14,9 +14,8 @@ using System.Windows.Shapes;
 
 namespace SistemaEvolution.Apresentacao
 {
-    /// <summary>
-    /// Interaction logic for frmChamado.xaml
-    /// </summary>
+
+    //Código para iniciar o form↓
     public partial class frmChamado : Window
     {
         public frmChamado()
@@ -24,6 +23,7 @@ namespace SistemaEvolution.Apresentacao
             InitializeComponent();
         }
 
+        //Código do botão para buscar o chamado↓
         private void btnBuscarChamados_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaChamados = new List<string>();
@@ -56,6 +56,7 @@ namespace SistemaEvolution.Apresentacao
             }
         }
 
+        //Código do botão para cadastrar o chamado↓
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             List<String> ListaChamados = new List<string>();

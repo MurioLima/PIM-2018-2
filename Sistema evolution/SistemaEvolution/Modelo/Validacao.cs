@@ -9,6 +9,7 @@ using SistemaEvolution.Apresentacao;
 
 namespace SistemaEvolution.Modelo
 {
+    //Declaração das variaveis↓
     public class Validacao
     {
         public String mensagem;
@@ -16,10 +17,11 @@ namespace SistemaEvolution.Modelo
         public String Cod_Produto;
         public String Cod_Funcionario;
         public String ID_usuario;
-        
 
 
 
+
+        //Código de validação do cliente↓
         public void ValidarDadosCliente(List<String> ListaCliente)
         {
             this.mensagem = "";
@@ -56,6 +58,7 @@ namespace SistemaEvolution.Modelo
 
         }
 
+        //Código de validação do produto↓
         public void ValidarDadosProduto(List<String> ListaProduto)
         {
             this.mensagem = "";
@@ -79,7 +82,7 @@ namespace SistemaEvolution.Modelo
 
         }
 
-
+        //Código de validação do funcionário↓
         public void ValidarDadosFuncionario(List<String> ListaFuncionario)
         {
             this.mensagem = "";
@@ -112,6 +115,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código de validação do usuario↓
         public void ValidarDadosUsuario(List<String> ListaUsuario)
         {
             this.mensagem = "";
@@ -127,6 +131,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código de validação do chamado↓
         public void ValidarDadosChamados(List<String> ListaChamados)
         {
             this.mensagem = "";
@@ -142,6 +147,7 @@ namespace SistemaEvolution.Modelo
             }
         }
 
+        //Código de validação do atendimento↓
         public void ValidarDadosAtendimento(List<String> ListaTipoAtendimento)
         {
             this.mensagem = "";

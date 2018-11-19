@@ -14,9 +14,8 @@ using System.Windows.Shapes;
 
 namespace SistemaEvolution.Apresentacao
 {
-    /// <summary>
-    /// Lógica interna para frmSelecaoFuncionario.xaml
-    /// </summary>
+
+    //Código para iniciar o form↓
     public partial class frmSelecaoFuncionario : Window
     {
         public frmSelecaoFuncionario()
@@ -24,17 +23,22 @@ namespace SistemaEvolution.Apresentacao
             InitializeComponent();
             InicializarDTG();
         }
+
+        //Código para iniciar o form dtg↓
         public void InicializarDTG()
         {
             dtgSelecaoFuncionario.ItemsSource = Modelo.atbEstaticos.listaFuncionarioEstatico;
         }
 
+        //Código para exibir o dtg↓
         private void dtgSelecaoFuncionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Modelo.atbEstaticos.listaFuncionarioEstatico.Clear();
             Modelo.atbEstaticos.listaFuncionarioEstatico.Add(
                 (Modelo.Funcionario)dtgSelecaoFuncionario.SelectedItem);
         }
+
+        //Código para fechar o from dtg↓
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
